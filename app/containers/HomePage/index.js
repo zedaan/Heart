@@ -11,7 +11,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-
+import { DAEMON as mode } from 'utils/constants';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
@@ -30,13 +30,30 @@ import reducer from './reducer';
 import saga from './saga';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  /**
-   * when initial state username is not null, submit the form to load repos
-   */
-  componentDidMount() {
-    if (this.props.username && this.props.username.trim().length > 0) {
-      this.props.onSubmitForm();
+  static propTypes = {
+    loading: PropTypes.bool,
+    error: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.bool,
+    ]),
+    repos: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.bool,
+    ]),
+    onLoadRepos: PropTypes.func,
+    username: PropTypes.string,
+    onChangeUsername: PropTypes.func,
+  };
+
+  handleChangeUsername = ({ target }) => {
+    this.props.onChangeUsername(target.value);
+  }
+
+  handleSubmitForm = (e) => {
+    if (e && e.preventDefault) {
+      e.preventDefault();
     }
+    this.props.onLoadRepos();
   }
 
   render() {
@@ -66,7 +83,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <H2>
               <FormattedMessage {...messages.trymeHeader} />
             </H2>
-            <Form onSubmit={this.props.onSubmitForm}>
+            <Form onSubmit={this.handleSubmitForm}>
               <label htmlFor="username">
                 <FormattedMessage {...messages.trymeMessage} />
                 <AtPrefix>
@@ -77,7 +94,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                   type="text"
                   placeholder="mxstbr"
                   value={this.props.username}
-                  onChange={this.props.onChangeUsername}
+                  onChange={this.handleChangeUsername}
                 />
               </label>
             </Form>
@@ -89,31 +106,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 }
 
-HomePage.propTypes = {
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.bool,
-  ]),
-  repos: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.bool,
-  ]),
-  onSubmitForm: PropTypes.func,
-  username: PropTypes.string,
-  onChangeUsername: PropTypes.func,
-};
-
-export function mapDispatchToProps(dispatch) {
-  return {
-    onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
-    onSubmitForm: (evt) => {
-      if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-      dispatch(loadRepos());
-    },
-  };
-}
-
+// Note we create new instances of each selector
 const mapStateToProps = createStructuredSelector({
   repos: makeSelectRepos(),
   username: makeSelectUsername(),
@@ -121,10 +114,22 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectError(),
 });
 
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
+const actionCreators = {
+  onLoadRepos: loadRepos,
+  onChangeUsername: changeUsername,
+};
 
-const withReducer = injectReducer({ key: 'home', reducer });
-const withSaga = injectSaga({ key: 'home', saga });
+// Unique key for slice reducer and
+// saga lifecycle state
+const key = 'home';
+
+// Higher-order components to:
+//  - withConnect: Connect to store, bind action creators
+//  - withReducer: Inject and initialize the new reducer and at specified key
+//  - withSaga: Attach our watcher saga (run as a background DAEMON)
+const withConnect = connect(mapStateToProps, actionCreators);
+const withReducer = injectReducer({ key, reducer });
+const withSaga = injectSaga({ key, saga, mode });
 
 export default compose(
   withReducer,
