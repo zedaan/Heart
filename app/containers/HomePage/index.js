@@ -45,6 +45,12 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     onChangeUsername: PropTypes.func,
   };
 
+  componentDidMount() {
+    if (this.props.username) {
+      this.props.onChangeUsername(this.props.username.trim());
+    }
+  }
+
   handleChangeUsername = ({ target }) => {
     this.props.onChangeUsername(target.value);
   }
