@@ -15,27 +15,21 @@ import Promo from 'containers/Promo/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
-  margin: 0 auto;
-  display: flex;
-  min-height: 100%;
-  padding: 0 16px;
-  flex-direction: column;
 `;
 
 export default function App() {
   return (
     <AppWrapper>
       <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
+        titleTemplate="%s - Hello Heart App"
+        defaultTitle="Hello Heart App"
       >
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
-      <Switch>
-        <Route exact path="/" component={Promo} />
-        {/* <Route path="" component={NotFoundPage} /> */}
-      </Switch>
+        <Switch>
+            <Route exact path="/" component={Promo} />
+            {/* <Route path="" component={NotFoundPage} /> */}
+        </Switch>
     </AppWrapper>
   );
 }

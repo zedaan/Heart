@@ -1,8 +1,3 @@
-/**
- *
- * Promo
- *
- */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,30 +6,32 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import { Container } from 'semantic-ui-react'
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectPromo from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { Grid } from 'semantic-ui-react';
+import {Wrapper} from 'components/Wrapper'
 
 export class Promo extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
-        <Helmet>
-          <title>Promo</title>
-          <meta name="description" content="Description of Promo" />
-        </Helmet>
-        <div className="className">
-          <Grid container columns={1}>
-            <Grid.Row>
-              <Grid.Column>
-                <h1>jfshkfs</h1>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </div>
+          <Helmet>
+            <title>Promo</title>
+            <meta name="description" content="Description of Promo" />
+          </Helmet>
+          <Wrapper>
+            <Container>
+              <Grid.Row>
+                <Grid.Column>
+                  <h1>jfshkfs</h1>
+                </Grid.Column>
+              </Grid.Row>
+            </Container>
+          </Wrapper>
       </div>
     );
   }
