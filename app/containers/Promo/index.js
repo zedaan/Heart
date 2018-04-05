@@ -14,6 +14,9 @@ import reducer from './reducer';
 import saga from './saga';
 import { Grid } from 'semantic-ui-react';
 import {Wrapper} from 'components/Wrapper'
+import image from '../../images/bg.png'
+import Header from '../../components/Header'
+import Heading from '../../components/Heading'
 
 export class Promo extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -25,9 +28,14 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
           </Helmet>
           <Wrapper>
             <Container>
-              <Grid.Row>
-                <Grid.Column>
-                  <h1>jfshkfs</h1>
+            <Grid.Row centered>
+              <Grid.Column ui right floated image>
+                  <Header />
+                  <Heading text="It's your heart's full picture."/>
+                  <p> if your employer offers Hello Heart, your
+                    <strong>Employer Code </strong> has been sent in an emial,
+                    text, postcard, or pigeon :) Add it below!
+                  </p>
                 </Grid.Column>
               </Grid.Row>
             </Container>

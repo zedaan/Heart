@@ -16,6 +16,7 @@ import Promo from 'containers/Promo/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 const AppWrapper = styled.div`
+  min-height: 100%;
 `;
 
 export default function App() {
