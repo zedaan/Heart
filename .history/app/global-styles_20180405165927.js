@@ -1,8 +1,11 @@
 import { injectGlobal } from 'styled-components';
-import image from 'images/bg.png'
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+  @font-face {
+      font-family: DINOT;
+      src: url("./Font/Dinot.otf") format("opentype");
+  }
   html,
   body {
     height: 100%;
@@ -10,20 +13,17 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'DINOT', Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'DINOT', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   #app {
+    background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
-    background: url(${image});
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
   }
 
   p,
@@ -36,7 +36,7 @@ injectGlobal`
     width:100%;
     text-transform: uppercase;
     letter-spacing:0.7px;
-    font-weight:400;
+    font-weight:700;
     border-radius: 30px;
     height:35px;
 

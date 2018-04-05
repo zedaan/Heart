@@ -1,5 +1,4 @@
 import { injectGlobal } from 'styled-components';
-import image from 'images/bg.png'
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
@@ -7,6 +6,10 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
+  }
+  @font-face {
+      font-family: DINOT_Light;
+      src: url("./Font/Dinot.otf") format("opentype");
   }
 
   body {
@@ -18,12 +21,9 @@ injectGlobal`
   }
 
   #app {
+    background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
-    background: url(${image});
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
   }
 
   p,
@@ -36,7 +36,7 @@ injectGlobal`
     width:100%;
     text-transform: uppercase;
     letter-spacing:0.7px;
-    font-weight:400;
+    font-weight:700;
     border-radius: 30px;
     height:35px;
 

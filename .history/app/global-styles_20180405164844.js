@@ -1,5 +1,4 @@
 import { injectGlobal } from 'styled-components';
-import image from 'images/bg.png'
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
@@ -18,12 +17,9 @@ injectGlobal`
   }
 
   #app {
+    background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
-    background: url(${image});
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
   }
 
   p,
