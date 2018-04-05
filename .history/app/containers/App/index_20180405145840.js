@@ -33,6 +33,7 @@ export default function App() {
       </Helmet>
       <Switch>
         <Route exact path="/" component={App} />
+        <Route path="/features" component={App} />
         <Route path="" component={NotFoundPage} />
       </Switch>
     </AppWrapper>
