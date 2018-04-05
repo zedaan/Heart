@@ -1,7 +1,12 @@
 import { injectGlobal } from 'styled-components';
+import Dinot from './Font/DINOT.otf';
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+  @font-face {
+      font-family: DINOT;
+      src: url(${Dinot}) format("opentype");
+  }
   html,
   body {
     height: 100%;
@@ -9,11 +14,11 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'DINOT', Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'DINOT', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   #app {
@@ -32,7 +37,7 @@ injectGlobal`
     width:100%;
     text-transform: uppercase;
     letter-spacing:0.7px;
-    font-weight:400;
+    font-weight:700;
     border-radius: 30px;
     height:35px;
 

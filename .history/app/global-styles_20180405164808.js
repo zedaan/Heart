@@ -31,9 +31,7 @@ injectGlobal`
     color:white;
     width:100%;
     text-transform: uppercase;
-    letter-spacing:0.7px;
-    font-weight:400;
-    border-radius: 30px;
+    border-radius: 10px;
     height:35px;
 
   }

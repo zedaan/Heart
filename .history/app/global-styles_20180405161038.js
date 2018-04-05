@@ -28,19 +28,9 @@ injectGlobal`
     line-height: 1.5em;
   }
   .btn-heart{
-    color:white;
-    width:100%;
-    text-transform: uppercase;
-    letter-spacing:0.7px;
-    font-weight:400;
-    border-radius: 30px;
-    height:35px;
-
+    background-color:
   }
   .bg-primary{
     background-color: #66a200;
-  }
-  .clr-primary{
-    color: #66a200;
   }
 `;

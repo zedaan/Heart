@@ -1,14 +1,18 @@
-
+/**
+ *
+ * App
+ *
+ * This component is the skeleton around the actual pages, and should only
+ * contain code that should be seen on all pages. (e.g. navigation bar)
+ */
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-
 import 'semantic-ui-css/semantic.css';
 import Promo from 'containers/Promo/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import Info from 'containers/Info/Loadable';
 
 const AppWrapper = styled.div`
 `;
@@ -24,8 +28,7 @@ export default function App() {
       </Helmet>
         <Switch>
             <Route exact path="/" component={Promo} />
-            <Route exact path="/Info" component={Info} />
-            {/* <Route path="" component={NotFoundPage} /> */}
+            <Route path="" component={NotFoundPage} />
         </Switch>
     </AppWrapper>
   );

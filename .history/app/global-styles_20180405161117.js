@@ -29,13 +29,7 @@ injectGlobal`
   }
   .btn-heart{
     color:white;
-    width:100%;
-    text-transform: uppercase;
-    letter-spacing:0.7px;
-    font-weight:400;
-    border-radius: 30px;
-    height:35px;
-
+    display:block;
   }
   .bg-primary{
     background-color: #66a200;
