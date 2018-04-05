@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
+import Promo from 'containers/Promo/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 const AppWrapper = styled.div`
@@ -32,8 +33,8 @@ export default function App() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
       <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="" component={NotFoundPage} />
+        <Route exact path="/" component={Promo} />
+        {/* <Route path="" component={NotFoundPage} /> */}
       </Switch>
     </AppWrapper>
   );
