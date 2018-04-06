@@ -27,12 +27,12 @@ import Button from '../../components/Button';
 export class Start extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <div className="height">
         <Helmet>
           <title>Start</title>
           <meta name="description" content="Description of Start" />
         </Helmet>
-        <Wrapper>
+        <Wrapper className="height">
           <Container textAlign="center">
             <Grid.Row>
               <Grid.Column>

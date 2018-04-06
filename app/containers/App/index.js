@@ -13,8 +13,8 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Info from 'containers/Info/Loadable';
 
 const AppWrapper = styled.div`
-  min-height: 100%;
-`;
+  height: 100vh;
+`
 
 export default function App() {
   return (
