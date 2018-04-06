@@ -38,10 +38,10 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
                   </p>
                   <Form.Field>
                   <label className="label">My Premium Code is: </label>
-                  <input className="main-input" size='large' placeholder='First Name' />
+                  <input className="main-input" size='large' placeholder='Type Code Here ' />
                   </Form.Field>
-                  <Button text="Start Now"/>
-                  <p className="sub-text">Have an account? Login > </p>
+                  <Button text="Start Now!"/>
+                <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>
                 </Grid.Column>
               </Grid.Row>
             </Container>

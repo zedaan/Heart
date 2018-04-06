@@ -8,6 +8,7 @@ import { Switch, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.css';
 import Promo from 'containers/Promo/Loadable';
 import Start from 'containers/Start/Loadable';
+import Complete from 'containers/Complete/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Info from 'containers/Info/Loadable';
 
@@ -27,6 +28,7 @@ export default function App() {
         <Switch>
             <Route exact path="/" component={Promo} />
             <Route exact path="/start" component={Start} />
+            <Route exact path="/complete" component={Complete} />
             <Route exact path="/Info" component={Info} />
             {/* <Route path="" component={NotFoundPage} /> */}
         </Switch>
