@@ -28,7 +28,7 @@ export default function App() {
       </Helmet>
         <Switch>
             <Route exact path="/" component={Signup} />
-            <Route path="/Promo" component={Promo} />
+            <Route  path="/Promo" component={Promo} />
             <Route path="/start" component={Start} />
             <Route path="/complete" component={Complete} />
             <Route path="/info" component={Info} />

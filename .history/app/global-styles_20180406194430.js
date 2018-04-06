@@ -51,14 +51,11 @@ injectGlobal`
   }
 
   @media(min-width: 768px){
-    body{
-
-      overflow:hidden;
-    }
     #app{
       width: 50%;
       margin:auto;
       padding: 20px;
+      overflow:hidden;
     }
   }
 

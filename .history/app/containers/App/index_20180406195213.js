@@ -27,8 +27,8 @@ export default function App() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
         <Switch>
-            <Route exact path="/" component={Signup} />
-            <Route path="/Promo" component={Promo} />
+            <Route path="/" component={Signup} />
+            <Route exact path="/Promo" component={Promo} />
             <Route path="/start" component={Start} />
             <Route path="/complete" component={Complete} />
             <Route path="/info" component={Info} />

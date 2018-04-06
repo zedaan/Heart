@@ -16,6 +16,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectStart from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+
 import { Container, Grid, Form } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import image from '../../images/bg.png'
@@ -24,10 +25,6 @@ import Heading from '../../components/Heading'
 import Button from '../../components/Button';
 
 export class Start extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  handleSubmit = (props) => {
-    console.log(this.props)
-    this.props.history.push('/info')
-  }
   render() {
     return (
       <div className="height">

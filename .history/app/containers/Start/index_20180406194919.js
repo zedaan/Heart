@@ -25,8 +25,7 @@ import Button from '../../components/Button';
 
 export class Start extends React.Component { // eslint-disable-line react/prefer-stateless-function
   handleSubmit = (props) => {
-    console.log(this.props)
-    this.props.history.push('/info')
+    this.props.history.push('/Info')
   }
   render() {
     return (
