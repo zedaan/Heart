@@ -24,11 +24,11 @@ const validations = (values) => {
     if (!values.lastName) {
         errors.lastName = "Last name is required";
     }
-    
+
     if (!values.options) {
         errors.options = "Select an option";
     }
-    
+
     if (!values.hlcid) {
         errors.hlcid = "This field is required. You can find it on your Healthy Living Credit Checklist";
     }
@@ -82,14 +82,14 @@ let Demo = (props) => {
             <Field component={InputBox} type="text" autoComplete='firstName' label="First Name" name="firstName" placeholder="First Name"/>
 
             <Field component={InputBox} type="text" autoComplete='lastName' label="Last Name" name="lastName" placeholder="last Name"/>
-            
-            
+
+
             <Field component={DropdownField} autoComplete='options' label="Employee/Spouse" name="options" />
 
             <Field component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID"/>
-            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>    
-            
-      
+            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>
+
+
         </Form>
 
     );
@@ -103,7 +103,7 @@ Demo = reduxForm({
 
 Demo = connect(
     state => ({
-        
+
 
     })
 )(Demo)
