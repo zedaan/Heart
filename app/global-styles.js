@@ -47,4 +47,49 @@ injectGlobal`
   .clr-primary{
     color: #66a200;
   }
+
+  // Gloabal Claasses
+  .logo{
+  position: relative;
+  padding-top: 1rem;
+}
+
+// Typography Goes here
+  .Main-Heading{
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  .main-text{
+    font-size: 16px;
+  }
+  .sub-text{
+    font-size: 20px;
+    margin-top: 3rem;
+  }
+
+  // Form Style Goes here
+  .field{
+    margin: 20px auto;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+    .label{
+      position: relative;
+      font-size: 15px;
+      display: inline-block;
+    }
+    .main-input{
+      position: relative;
+      display: inline-block;
+      width: 50%;
+      padding: 1rem;
+    }
+  }
+
+  .btn-custom{
+    position: relative;
+    margin: 20px auto;
+  }
 `;

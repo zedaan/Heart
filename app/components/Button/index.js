@@ -7,7 +7,7 @@ class Button extends React.Component { // eslint-disable-line react/prefer-state
 
   render() {
     return (
-      <button className="btn-heart bg-primary">{this.props.text}</button>
+      <button className="btn-heart bg-primary btn-custom">{this.props.text}</button>
     );
   }
 }

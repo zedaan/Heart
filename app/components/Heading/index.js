@@ -11,7 +11,7 @@ import React from 'react';
 class Heading extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h2>{this.props.text}</h2>
+        <h2 className="Main-Heading">{this.props.text}</h2>
     );
   }
 }

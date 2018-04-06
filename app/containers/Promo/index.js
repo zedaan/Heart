@@ -6,17 +6,17 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
-import { Container } from 'semantic-ui-react'
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectPromo from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { Grid } from 'semantic-ui-react';
+import { Container, Grid, Form } from 'semantic-ui-react';
 import {Wrapper} from 'components/Wrapper'
 import image from '../../images/bg.png'
 import Header from '../../components/Header'
 import Heading from '../../components/Heading'
+import Button from '../../components/Button';
 
 export class Promo extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -27,15 +27,21 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
             <meta name="description" content="Description of Promo" />
           </Helmet>
           <Wrapper>
-            <Container>
-            <Grid.Row centered>
-              <Grid.Column ui right floated image>
+            <Container textAlign="center">
+            <Grid.Row>
+              <Grid.Column>
                   <Header />
                   <Heading text="It's your heart's full picture."/>
-                  <p> if your employer offers Hello Heart, your
-                    <strong>Employer Code </strong> has been sent in an emial,
+                  <p className="main-text"> if your employer offers Hello Heart, your
+                    <strong> Employer Code </strong> has been sent in an emial,
                     text, postcard, or pigeon :) Add it below!
                   </p>
+                  <Form.Field>
+                  <label className="label">My Premium Code is: </label>
+                  <input className="main-input" size='large' placeholder='First Name' />
+                  </Form.Field>
+                  <Button text="Start Now"/>
+                  <p className="sub-text">Have an account? Login > </p>
                 </Grid.Column>
               </Grid.Row>
             </Container>
