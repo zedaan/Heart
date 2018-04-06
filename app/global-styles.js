@@ -35,15 +35,13 @@ injectGlobal`
   }
 
   #app {
-    min-height: 100vh;
-    min-width: 100vw;
     background: url(${image});
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
   }
   .height{
-    height: 100vh;
+    height: 100%;
   }
   p,
   label {
@@ -141,10 +139,6 @@ injectGlobal`
     position: relative;
     display: inline-block;
     width: 70%;
-<<<<<<< HEAD
-    float:right;
-=======
->>>>>>> e27f93a513e8d854ec1fb5421d7c256e1026f398
     padding: 1rem;
     float: right;
     background-color: transparent;
