@@ -36,12 +36,10 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
                     <strong> Employer Code </strong> has been sent in an emial,
                     text, postcard, or pigeon :) Add it below!
                   </p>
-                  <Form id="Main-Form">
-                    <Form.Field>
+                  <Form.Field>
                     <label className="label">My Premium Code is: </label>
                     <input className="main-input" size='large' placeholder='Type Code Here ' />
-                    </Form.Field>
-                  </Form>
+                  </Form.Field>
                   <Button text="Start Now!"/>
                   <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>
                 </Grid.Column>
