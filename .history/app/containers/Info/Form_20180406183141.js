@@ -31,7 +31,7 @@ const validations = (values) => {
     }
     
     if (!values.hlcid) {
-        errors.hlcid = "This field is required. ";
+        errors.hlcid = "This field is required. You can find it on your Healthy Living Credit Checklist";
     }
 
     return errors;

@@ -132,7 +132,8 @@ injectGlobal`
   }
 }
 
-#signup-form .field:nth-child(2){
+.ui.form .field:last-child{
+  
   border-bottom: 1px solid #a7a7a7;
 }
 .ui.form .field{
@@ -162,6 +163,12 @@ injectGlobal`
   .main-input::placeholder {
     color:#9f9f9f;
   }
+}
+
+.warning{
+  width:70%;
+  float:right;
+  color:#9f9f9f;
 }
 
 .ui.form select .select{
@@ -255,16 +262,4 @@ injectGlobal`
   width:70%;
   float:right;
 }
-
-.warning, .register{
-  width:70%;
-  float:right;
-  color:#9f9f9f;
-}
-.register{
-  color:#9f9f9f;
-  width:100%;
-  text-align:center;
-}
-
 `;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { reduxForm, Field } from 'redux-form/immutable';
-import { Grid, Form, Input,Select, Label } from 'semantic-ui-react';
-import Button from "components/Button";
+import { Grid, Button, Checkbox, Form, Input, Radio, Select, TextArea, Search, Label } from 'semantic-ui-react';
 
 
 const validations = (values) => {
@@ -25,13 +24,13 @@ const validations = (values) => {
     if (!values.lastName) {
         errors.lastName = "Last name is required";
     }
-    
+
     if (!values.options) {
         errors.options = "Select an option";
     }
-    
+
     if (!values.hlcid) {
-        errors.hlcid = "This field is required. ";
+        errors.hlcid = "This field is required. You can find it on your Healthy Living Credit Checklist";
     }
 
     return errors;
@@ -45,7 +44,7 @@ const InputBox = (props) => {
     return (
         <Form.Field>
             <label className="label">{label}</label>
-            <input className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value}  />
+            <input className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value} />
             {
                 touched && ((error && <span className="error">{error}</span>))
             }
@@ -78,20 +77,19 @@ let Demo = (props) => {
     return (
         <Form onSubmit={handleSubmit(onSubmit)} id="info-form">
 
-            <Field component={InputBox} type="email" autoComplete='email' label="Your Email" name="email"  placeholder="Email"/>
+            <Field component={InputBox} type="email" autoComplete='email' label="Your Email" name="email" placeholder="Email" />
 
-            <Field component={InputBox} type="text" autoComplete='firstName' label="First Name" name="firstName" placeholder="First Name"/>
+            <Field component={InputBox} type="text" autoComplete='firstName' label="First Name" name="firstName" placeholder="First Name" />
 
-            <Field component={InputBox} type="text" autoComplete='lastName' label="Last Name" name="lastName" placeholder="last Name"/>
-            
-            
+            <Field component={InputBox} type="text" autoComplete='lastName' label="Last Name" name="lastName" placeholder="last Name" />
+
+
             <Field component={DropdownField} autoComplete='options' label="Employee/Spouse" name="options" />
 
-            <Field component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID"/>
-            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>    
-            
-            <Button text="Continue" />
-            
+            <Field component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID" />
+            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>
+
+
         </Form>
 
     );
@@ -105,7 +103,7 @@ Demo = reduxForm({
 
 Demo = connect(
     state => ({
-        
+
 
     })
 )(Demo)

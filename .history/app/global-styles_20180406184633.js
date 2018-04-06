@@ -132,7 +132,7 @@ injectGlobal`
   }
 }
 
-#signup-form .field:nth-child(2){
+#info-form:nth-child{
   border-bottom: 1px solid #a7a7a7;
 }
 .ui.form .field{

@@ -22,6 +22,7 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
 
   onSubmit = (value) => {
     console.log(value)
+    this.props.submitAction()
   }
 
   render() {

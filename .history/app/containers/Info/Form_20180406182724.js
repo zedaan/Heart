@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { reduxForm, Field } from 'redux-form/immutable';
-import { Grid, Form, Input,Select, Label } from 'semantic-ui-react';
-import Button from "components/Button";
+import { Grid, Button, Checkbox, Form, Input,Select, Label } from 'semantic-ui-react';
 
 
 const validations = (values) => {
@@ -31,7 +30,7 @@ const validations = (values) => {
     }
     
     if (!values.hlcid) {
-        errors.hlcid = "This field is required. ";
+        errors.hlcid = "This field is required. You can find it on your Healthy Living Credit Checklist";
     }
 
     return errors;
@@ -90,8 +89,7 @@ let Demo = (props) => {
             <Field component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID"/>
             <span className="warning">You can find it on your Healthy Living Credit Checklist</span>    
             
-            <Button text="Continue" />
-            
+      
         </Form>
 
     );

@@ -28,10 +28,10 @@ export default function App() {
       </Helmet>
         <Switch>
             <Route exact path="/" component={Promo} />
-            <Route path="/start" component={Start} />
-            <Route path="/complete" component={Complete} />
-            <Route path="/Info" component={Info} />
-            <Route path="/Signup" component={Signup} />
+            <Route exact path="/start" component={Start} />
+            <Route exact path="/complete" component={Complete} />
+            <Route exact path="/Info" component={Info} />
+            <Route exact path="/Signup" component={Signup} />
             {/* <Route path="" component={NotFoundPage} /> */}
         </Switch>
     </AppWrapper>

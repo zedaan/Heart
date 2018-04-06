@@ -21,7 +21,7 @@ import * as a from './actions';
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   onSubmit = (value) => {
-    console.log(value)
+    this.props.submitAction()
   }
 
   render() {
@@ -44,7 +44,11 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
                 <Form  onSubmit={this.onSubmit}/>
               </Grid.Column>
             </Grid.Row>
-           
+            <Grid.Row>
+              <Grid.Column>
+                <Button text="Continue"/>
+              </Grid.Column>
+            </Grid.Row>
           </Grid>
         </Container>
 

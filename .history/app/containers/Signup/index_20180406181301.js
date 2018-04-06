@@ -9,30 +9,20 @@ import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import makeSelectInfo from './selectors';
+import makeSelectSignup from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { Grid, Container } from 'semantic-ui-react';
-import Button from "components/Button";
-import FormHeading from "components/FormHeading";
-import Form from './Form';
-import * as a from './actions';
 
-export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
-  onSubmit = (value) => {
-    console.log(value)
-  }
-
+export class Signup extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div className="height">
+      <div>
         <Helmet>
-          <title>Info</title>
-          <meta name="description" content="Description of Info" />
+          <title>Signup</title>
+          <meta name="description" content="Description of Signup" />
         </Helmet>
 
-        <Container style={{padding:'50px 0'}}>
+        <Container style={{ padding: '50px 0' }}>
           <Grid>
             <Grid.Row columns={1}>
               <Grid.Column textAlign="center">
@@ -41,40 +31,42 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
             </Grid.Row>
             <Grid.Row columns={1}>
               <Grid.Column>
-                <Form  onSubmit={this.onSubmit}/>
+                <Form onSubmit={this.onSubmit} />
               </Grid.Column>
             </Grid.Row>
-           
+            <Grid.Row>
+              <Grid.Column>
+                <Button text="Start Now" />
+              </Grid.Column>
+            </Grid.Row>
           </Grid>
         </Container>
-
       </div>
     );
   }
 }
 
-Info.propTypes = {
+Signup.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
-  info: makeSelectInfo(),
+  signup: makeSelectSignup(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
-    submitAction: (payload) => dispatch(a.submitAction(payload))
   };
 }
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const withReducer = injectReducer({ key: 'info', reducer });
-const withSaga = injectSaga({ key: 'info', saga });
+const withReducer = injectReducer({ key: 'signup', reducer });
+const withSaga = injectSaga({ key: 'signup', saga });
 
 export default compose(
   withReducer,
   withSaga,
   withConnect,
-)(Info);
+)(Signup);

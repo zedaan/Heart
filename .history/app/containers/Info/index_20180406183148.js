@@ -21,7 +21,7 @@ import * as a from './actions';
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   onSubmit = (value) => {
-    console.log(value)
+    this.props.submitAction()
   }
 
   render() {

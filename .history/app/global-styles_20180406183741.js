@@ -132,7 +132,7 @@ injectGlobal`
   }
 }
 
-#signup-form .field:nth-child(2){
+.ui.form .field:last-child{
   border-bottom: 1px solid #a7a7a7;
 }
 .ui.form .field{
@@ -262,7 +262,7 @@ injectGlobal`
   color:#9f9f9f;
 }
 .register{
-  color:#9f9f9f;
+  float:none;
   width:100%;
   text-align:center;
 }
