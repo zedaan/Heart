@@ -102,26 +102,50 @@ injectGlobal`
   margin-top: 2.7rem;
 }
 // Form Style Goes here
-.ui.form .field{
+#Main-Form .field{
   margin: 20px auto;
   border-top: 1px solid #a7a7a7;
   border-bottom: 1px solid #a7a7a7;
   .label{
     position: relative;
-    display: inline-block;
+    display: inline;
     font-family: 'DINOT', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: #000;
     opacity: 0.85;
+    line-height: 3rem;
   }
   .main-input{
     position: relative;
     display: inline-block;
     width: 50%;
     padding: 1rem;
+    background-color: transparent;
   }
 }
+
+.ui.form .field{
+  border-top: 1px solid #a7a7a7;
+  .label{
+    position: relative;
+    display: inline;
+    font-family: 'DINOT', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    opacity: 0.85;
+    line-height: 3rem;
+  }
+  .main-input{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    padding: 1rem;
+    background-color: transparent;
+  }
+}
+
 .btn-custom{
   position: relative;
   font-family: 'DINOT', sans-serif;
