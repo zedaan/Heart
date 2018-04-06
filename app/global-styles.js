@@ -141,12 +141,22 @@ injectGlobal`
     position: relative;
     display: inline-block;
     width: 70%;
+<<<<<<< HEAD
     float:right;
+=======
+>>>>>>> e27f93a513e8d854ec1fb5421d7c256e1026f398
     padding: 1rem;
+    float: right;
     background-color: transparent;
   }
 }
-
+.ui.form input:not([type]):focus{
+  border-color: transparent;
+  border-radius: 0;
+}
+.ui.form input:not([type]){
+  border: 0;
+}
 .btn-custom{
   position: relative;
   font-family: 'DINOT', sans-serif;
