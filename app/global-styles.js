@@ -33,7 +33,16 @@ injectGlobal`
     width: 100%;
     font-family: 'DINOT', sans-serif;
   }
+  .table{
+    display: table;
+    width: 100%
+  }
+  .table-middle{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 
+  }
   #app {
     background: url(${image});
     background-size: 100% 100%;
@@ -213,7 +222,7 @@ injectGlobal`
 .btn-custom:focus{
   outline:none;
 }
-  
+
 .complete-page{
   .Mockup{
     padding-top: 3rem;

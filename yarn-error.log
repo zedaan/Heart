@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /home/zedaan/.yarn/bin/yarn.js add semantic-ui-css
+  /usr/local/bin/node /home/zedaan/.yarn/bin/yarn.js start
 
 PATH: 
-  /home/zedaan/.yarn/bin:/home/zedaan/.config/yarn/global/node_modules/.bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.yarn/bin:/home/zedaan/.config/yarn/global/node_modules/.bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:./node_modules/.bin:/home/zedaan/bin:/home/zedaan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/zedaan/.rvm/bin:/home/zedaan/.rvm/bin:/home/zedaan/.rvm/bin
+  /home/zedaan/.yarn/bin:/home/zedaan/.config/yarn/global/node_modules/.bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:./node_modules/.bin:/home/zedaan/bin:/home/zedaan/.local/bin:/home/zedaan/.yarn/bin:/home/zedaan/.config/yarn/global/node_modules/.bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/plugins/ruby-build/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:/home/zedaan/.rbenv/shims:/home/zedaan/.rbenv/bin:./node_modules/.bin:/home/zedaan/bin:/home/zedaan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/zedaan/.rvm/bin:/home/zedaan/.rvm/bin:/home/zedaan/.rvm/bin:/home/zedaan/.rvm/bin
 
 Yarn version: 
   1.5.1
@@ -252,10 +252,12 @@ npm manifest:
       "react-router-dom": "4.1.1",
       "react-router-redux": "5.0.0-alpha.6",
       "redux": "3.6.0",
+      "redux-form": "^7.3.0",
       "redux-immutable": "4.0.0",
       "redux-saga": "0.15.3",
       "reselect": "3.0.1",
       "sanitize.css": "4.1.0",
+      "semantic-ui-css": "^2.3.1",
       "semantic-ui-react": "^0.79.1",
       "styled-components": "2.0.0",
       "warning": "3.0.0",
@@ -2829,6 +2831,10 @@ Lockfile:
       es6-iterator "2"
       es6-symbol "~3.1"
   
+  es6-error@^4.1.1:
+    version "4.1.1"
+    resolved "https://registry.yarnpkg.com/es6-error/-/es6-error-4.1.1.tgz#9e3af407459deed47e9a91f9b885a84eb05c561d"
+  
   es6-iterator@2, es6-iterator@^2.0.1, es6-iterator@~2.0.1:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/es6-iterator/-/es6-iterator-2.0.1.tgz#8e319c9f0453bf575d374940a655920e59ca5512"
@@ -3930,6 +3936,10 @@ Lockfile:
     version "2.3.1"
     resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
   
+  hoist-non-react-statics@^2.5.0:
+    version "2.5.0"
+    resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
+  
   home-or-tmp@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/home-or-tmp/-/home-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"
@@ -4260,6 +4270,12 @@ Lockfile:
   invariant@2.2.2, invariant@^2.0.0, invariant@^2.1.1, invariant@^2.2.1, invariant@^2.2.2:
     version "2.2.2"
     resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
+    dependencies:
+      loose-envify "^1.0.0"
+  
+  invariant@^2.2.3:
+    version "2.2.4"
+    resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
     dependencies:
       loose-envify "^1.0.0"
   
@@ -4886,6 +4902,10 @@ Lockfile:
       bin-wrapper "^3.0.0"
       logalot "^2.0.0"
   
+  jquery@x.*:
+    version "3.3.1"
+    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  
   js-base64@^2.1.9:
     version "2.3.1"
     resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.3.1.tgz#3705897c35fce0e202132630e750d8a17cd220ec"
@@ -5171,6 +5191,10 @@ Lockfile:
     version "0.1.4"
     resolved "https://registry.yarnpkg.com/lock/-/lock-0.1.4.tgz#fec7deaef17e7c3a0a55e1da042803e25d91745d"
   
+  lodash-es@^4.17.5:
+    version "4.17.8"
+    resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.8.tgz#6fa8c8c5d337481df0bdf1c0d899d42473121e45"
+  
   lodash-es@^4.2.0, lodash-es@^4.2.1:
     version "4.17.4"
     resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
@@ -5366,6 +5390,10 @@ Lockfile:
   lodash@4.17.4, lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
     version "4.17.4"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  
+  lodash@^4.17.5:
+    version "4.17.5"
+    resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
   
   log-driver@1.2.5:
     version "1.2.5"
@@ -6613,6 +6641,14 @@ Lockfile:
       fbjs "^0.8.9"
       loose-envify "^1.3.1"
   
+  prop-types@^15.6.1:
+    version "15.6.1"
+    resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
+    dependencies:
+      fbjs "^0.8.16"
+      loose-envify "^1.3.1"
+      object-assign "^4.1.1"
+  
   proxy-addr@~1.1.4:
     version "1.1.5"
     resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-1.1.5.tgz#71c0ee3b102de3f202f3b64f608d173fcba1a918"
@@ -6919,6 +6955,19 @@ Lockfile:
     dependencies:
       balanced-match "^0.4.2"
   
+  redux-form@^7.3.0:
+    version "7.3.0"
+    resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-7.3.0.tgz#b92ef1639c86a6009b0821aacfc80ad8b5ac8c05"
+    dependencies:
+      deep-equal "^1.0.1"
+      es6-error "^4.1.1"
+      hoist-non-react-statics "^2.5.0"
+      invariant "^2.2.3"
+      is-promise "^2.1.0"
+      lodash "^4.17.5"
+      lodash-es "^4.17.5"
+      prop-types "^15.6.1"
+  
   redux-immutable@4.0.0:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/redux-immutable/-/redux-immutable-4.0.0.tgz#3a1a32df66366462b63691f0e1dc35e472bbc9f3"
@@ -7221,6 +7270,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/seek-bzip/-/seek-bzip-1.0.5.tgz#cfe917cb3d274bcffac792758af53173eb1fabdc"
     dependencies:
       commander "~2.8.1"
+  
+  semantic-ui-css@^2.3.1:
+    version "2.3.1"
+    resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.3.1.tgz#a5485c640c98cce29d8ddde3eff3434566a068e0"
+    dependencies:
+      jquery x.*
   
   semantic-ui-react@^0.79.1:
     version "0.79.1"
@@ -8440,4 +8495,16 @@ Lockfile:
       fd-slicer "~1.0.1"
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/zedaan/Desktop/Files/ceme/Heart/node_modules/.yarn-integrity'
+  Error: Command failed.
+  Exit signal: SIGHUP
+  Command: sh
+  Arguments: -c cross-env NODE_ENV=development node server
+  Directory: /home/zedaan/Desktop/Files/ceme/Heart
+  Output:
+  
+      at ProcessTermError.MessageError (/home/zedaan/.yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/home/zedaan/.yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/home/zedaan/.yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:160:13)
+      at maybeClose (internal/child_process.js:943:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)

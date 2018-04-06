@@ -1,5 +1,6 @@
 
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
@@ -11,14 +12,23 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectPromo from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { Container, Grid, Form } from 'semantic-ui-react';
+import { Container, Grid} from 'semantic-ui-react';
 import {Wrapper} from 'components/Wrapper'
 import image from '../../images/bg.png'
 import Header from '../../components/Header'
 import Heading from '../../components/Heading'
 import Button from '../../components/Button';
+import Form from './Form';
+import * as a from './actions';
 
 export class Promo extends React.Component { // eslint-disable-line react/prefer-stateless-function
+
+  onSubmit = (value) => {
+    if (value.promo !== '' || value.promo !== null){
+        this.props.history.push('/start')
+      }
+  }
+
   render() {
     return (
       <div className="height">
@@ -36,13 +46,7 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
                     <strong> Employer Code </strong> has been sent in an emial,
                     text, postcard, or pigeon :) Add it below!
                   </p>
-                  <Form id="Main-Form">
-                    <Form.Field>
-                    <label className="label">My Premium Code is: </label>
-                    <input className="main-input" size='large' placeholder='Type Code Here ' />
-                    </Form.Field>
-                  </Form>
-                  <Button text="Start Now!"/>
+                <Form onSubmit={this.onSubmit} />
                   <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>
                 </Grid.Column>
               </Grid.Row>
@@ -64,6 +68,8 @@ const mapStateToProps = createStructuredSelector({
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
+    submitAction: (payload) => dispatch(a.submitAction(payload))
+
   };
 }
 
