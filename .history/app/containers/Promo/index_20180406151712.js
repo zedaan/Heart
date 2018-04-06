@@ -37,8 +37,8 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
                     text, postcard, or pigeon :) Add it below!
                   </p>
                   <Form.Field>
-                    <label className="label">My Premium Code is: </label>
-                    <input className="main-input" size='large' placeholder='Type Code Here ' />
+                  <label className="label">My Premium Code is: </label>
+                  <input className="main-input" size='large' placeholder='Type Code Here ' />
                   </Form.Field>
                   <Button text="Start Now!"/>
                   <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>

@@ -37,7 +37,7 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
               <Grid.Column>
                 <Form>
                   <Form.Field>
-                    <label className="label">Your Email</label>
+                    <label className="label">Last Name</label>
                     <input className="main-input" size='large' placeholder='Last Name' />
                   </Form.Field>
                 </Form>

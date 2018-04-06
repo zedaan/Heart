@@ -103,7 +103,7 @@ injectGlobal`
   margin-top: 2.7rem;
 }
 // Form Style Goes here
-.ui.form .field{
+.field{
   margin: 20px auto;
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;

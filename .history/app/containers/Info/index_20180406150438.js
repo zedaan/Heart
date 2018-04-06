@@ -12,7 +12,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectInfo from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { Grid, Container, Form } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import Button from "components/Button";
 import FormHeading from "components/FormHeading";
@@ -28,19 +28,9 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
 
         <Container style={{padding:'50px 0'}}>
           <Grid>
-            <Grid.Row columns={1}>
+            <Grid.Row>
               <Grid.Column textAlign="center">
                 <FormHeading text="Add your Info!" />
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={1}>
-              <Grid.Column>
-                <Form>
-                  <Form.Field>
-                    <label className="label">Your Email</label>
-                    <input className="main-input" size='large' placeholder='Last Name' />
-                  </Form.Field>
-                </Form>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
