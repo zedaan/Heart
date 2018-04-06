@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import image from 'images/bg.png'
+import image from 'images/bg1.jpg'
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`

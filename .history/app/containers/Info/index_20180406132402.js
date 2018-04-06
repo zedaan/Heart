@@ -12,10 +12,10 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectInfo from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { Grid, Container } from 'semantic-ui-react';
+import GridColumn, { Grid, Container } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import Button from "components/Button";
-import FormHeading from "components/FormHeading";
+import ColorHeading from "components/ColorHeading";
 
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -29,9 +29,9 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
         <Container>
           <Grid>
             <Grid.Row>
-              <Grid.Column>
-                <FormHeading text="Add your Info!" textAlign="center"/>
-              </Grid.Column>
+              <GridColumn>
+                
+              </GridColumn>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>

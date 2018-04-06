@@ -30,7 +30,7 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
           <Grid>
             <Grid.Row>
               <Grid.Column>
-                <FormHeading text="Add your Info!" textAlign="center"/>
+                <FormHeading text="Add your Info!"/>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>

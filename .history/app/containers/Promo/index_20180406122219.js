@@ -27,7 +27,7 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
             <meta name="description" content="Description of Promo" />
           </Helmet>
           <Wrapper>
-          <Container textAlign="center">
+            <Container textAlign="center">
             <Grid.Row>
               <Grid.Column>
                   <Header />
@@ -38,10 +38,10 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
                   </p>
                   <Form.Field>
                   <label className="label">My Premium Code is: </label>
-                  <input className="main-input" size='large' placeholder='Type Code Here ' />
+                  <input className="main-input" size='large' placeholder='First Name' />
                   </Form.Field>
-                  <Button text="Start Now!"/>
-                <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>
+                  <Button text="Start Now"/>
+                  <p className="sub-text">Have an account? Login > </p>
                 </Grid.Column>
               </Grid.Row>
             </Container>

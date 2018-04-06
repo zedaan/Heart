@@ -39,7 +39,10 @@ const ReactBoilerplate = {
       // The path where the DLL manifest and bundle will get built
       path: resolve('../node_modules/react-boilerplate-dlls'),
     },
-   
+    
+    node: {
+      fs: 'empty'
+    },
     entry(pkg) {
       const dependencyNames = Object.keys(pkg.dependencies);
       const exclude = pkg.dllPlugin.exclude || ReactBoilerplate.dllPlugin.defaults.exclude;

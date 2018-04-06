@@ -49,12 +49,18 @@ module.exports = (options) => ({
         test: /\.(png)$/,
         use: [
           'file-loader',
-          'url-loader',
           {
             loader: 'image-webpack-loader',
-
-          }
-          
+            options: {
+              progressive: true,
+              optimizationLevel: 7,
+              interlaced: false,
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+            },
+          },
         ]
       },
 
@@ -96,7 +102,9 @@ module.exports = (options) => ({
     ],
   },
 
-  
+  node: {
+    fs: 'empty'
+  },
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({
       // make fetch available
