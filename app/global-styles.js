@@ -140,12 +140,19 @@ injectGlobal`
   .main-input{
     position: relative;
     display: inline-block;
-    width: 50%;
+    width: 70%;
     padding: 1rem;
+    float: right;
     background-color: transparent;
   }
 }
-
+.ui.form input:not([type]):focus{
+  border-color: transparent;
+  border-radius: 0;
+}
+.ui.form input:not([type]){
+  border: 0;
+}
 .btn-custom{
   position: relative;
   font-family: 'DINOT', sans-serif;
