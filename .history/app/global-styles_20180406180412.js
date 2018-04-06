@@ -131,7 +131,10 @@ injectGlobal`
     background-color: transparent;
   }
 }
+// .ui.form .field:last-child{
 
+//   border-bottom: 1px solid #a7a7a7;
+// }
 #info-form{
   border-bottom: 1px solid #a7a7a7;
 

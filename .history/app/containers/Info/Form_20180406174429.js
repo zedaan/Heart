@@ -36,6 +36,13 @@ const validations = (values) => {
     return errors;
 }
 
+const warning = values => {
+    const warnings = {}
+    if (values.hlcid == "" || values.hlcid == null) {
+        warnings.hlcid = 'You can find it on your Healthy Living Credit Checklist'
+    }
+    return warnings
+}
 
 
 const InputBox = (props) => {
@@ -46,7 +53,7 @@ const InputBox = (props) => {
             <label className="label">{label}</label>
             <input className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value}  />
             {
-                touched && ((error && <span className="error">{error}</span>))
+                touched && ((error && <span className="error">{error}</span>) || (warning && <span className="warning">{warning}</span>))
             }
         </Form.Field>
 
@@ -75,7 +82,7 @@ let Demo = (props) => {
     const { onSubmit, handleSubmit } = props;
 
     return (
-        <Form onSubmit={handleSubmit(onSubmit)} id="info-form">
+        <Form onSubmit={handleSubmit(onSubmit)}>
 
             <Field component={InputBox} type="email" autoComplete='email' label="Your Email" name="email"  placeholder="Email"/>
 
@@ -87,7 +94,7 @@ let Demo = (props) => {
             <Field component={DropdownField} autoComplete='options' label="Employee/Spouse" name="options" />
 
             <Field component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID"/>
-            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>    
+            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>
             
       
         </Form>

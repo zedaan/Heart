@@ -131,10 +131,9 @@ injectGlobal`
     background-color: transparent;
   }
 }
+.ui.form .field:last-child{
 
-#info-form{
   border-bottom: 1px solid #a7a7a7;
-
 }
 .ui.form .field{
   border-top: 1px solid #a7a7a7;
@@ -170,7 +169,6 @@ injectGlobal`
   float:right;
   color:#9f9f9f;
 }
-
 .ui.form select .select{
   color:#9f9f9f;
 

@@ -75,7 +75,7 @@ let Demo = (props) => {
     const { onSubmit, handleSubmit } = props;
 
     return (
-        <Form onSubmit={handleSubmit(onSubmit)} id="info-form">
+        <Form onSubmit={handleSubmit(onSubmit)}>
 
             <Field component={InputBox} type="email" autoComplete='email' label="Your Email" name="email"  placeholder="Email"/>
 
@@ -87,7 +87,7 @@ let Demo = (props) => {
             <Field component={DropdownField} autoComplete='options' label="Employee/Spouse" name="options" />
 
             <Field component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID"/>
-            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>    
+            <span className="warning">You can find it on your Healthy Living Credit Checklist</span>
             
       
         </Form>
