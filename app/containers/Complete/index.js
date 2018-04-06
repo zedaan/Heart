@@ -1,6 +1,6 @@
 /**
  *
- * Start
+ * Complete
  *
  */
 
@@ -13,35 +13,33 @@ import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import makeSelectStart from './selectors';
+import makeSelectComplete from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-import { Container, Grid, Form } from 'semantic-ui-react';
+import { Container, Grid, Form, Image } from 'semantic-ui-react';
+import Mockup from '../../images/mockup.png'
 import { Wrapper } from 'components/Wrapper'
-import image from '../../images/bg.png'
-import Header from '../../components/Header'
-import Heading from '../../components/Heading'
 import Button from '../../components/Button';
 
-export class Start extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export class Complete extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
         <Helmet>
-          <title>Start</title>
-          <meta name="description" content="Description of Start" />
+          <title>Complete</title>
+          <meta name="description" content="Description of Complete" />
         </Helmet>
-        <Wrapper>
+        <Wrapper className="complete-page">
           <Container textAlign="center">
             <Grid.Row>
               <Grid.Column>
-                <Header />
-                <div style={{marginTop:'16rem'}}>
-                  <Heading text="It's your heart's full picture." />
-                  <Button text="Start Now" />
-                  <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>
-                </div>
+                <Image src={Mockup} className="Mockup" size='large' centered />
+                <h2 className="Heading">Great Job!</h2>
+                <p className="main-text"> Now, get the Hello Heart app to order your
+                  <br /><strong>FREE blood pressure monitor. </strong>
+                </p>
+                <Button text="Get the app to order your device! " />
               </Grid.Column>
             </Grid.Row>
           </Container>
@@ -51,12 +49,12 @@ export class Start extends React.Component { // eslint-disable-line react/prefer
   }
 }
 
-Start.propTypes = {
+Complete.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
-  start: makeSelectStart(),
+  complete: makeSelectComplete(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -67,11 +65,11 @@ function mapDispatchToProps(dispatch) {
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const withReducer = injectReducer({ key: 'start', reducer });
-const withSaga = injectSaga({ key: 'start', saga });
+const withReducer = injectReducer({ key: 'complete', reducer });
+const withSaga = injectSaga({ key: 'complete', saga });
 
 export default compose(
   withReducer,
   withSaga,
   withConnect,
-)(Start);
+)(Complete);

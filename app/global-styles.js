@@ -3,6 +3,30 @@ import image from 'images/bg.png'
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+  @font-face {
+    font-family: 'DINOT';
+    font-style: light;
+    font-weight: 100;
+    src:
+      local('DINOT-light'),
+      url(./Fonts/DINOT-Light.otf) format('otf');
+  }
+  @font-face {
+    font-family: 'DINOT';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      local('DINOT'),
+      url(./Fonts/DINOT.otf) format('otf');
+  }
+  @font-face {
+    font-family: 'DINOT';
+    font-style: medium;
+    font-weight: 600;
+    src:
+      local('DINOT-Medium'),
+      url(./Fonts/DINOT-Medium.otf) format('otf');
+  }
   html,
   body {
     height: 100%;
@@ -10,11 +34,7 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'DINOT', sans-serif;
   }
 
   #app {
@@ -28,7 +48,7 @@ injectGlobal`
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: 'DINOT', sans-serif;
     line-height: 1.5em;
   }
   .btn-heart{
@@ -49,47 +69,101 @@ injectGlobal`
   }
 
   // Gloabal Claasses
-  .logo{
+.logo{
   position: relative;
   padding-top: 1rem;
 }
-
 // Typography Goes here
-  .Main-Heading{
-    position: relative;
-    margin-top: 5rem;
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
-    font-weight: 300;
-  }
-  .main-text{
-    font-size: 16px;
-  }
-  .sub-text{
-    font-size: 20px;
-    margin-top: 3rem;
-  }
+.Main-Heading{
+  position: relative;
+  font-family: 'DINOT', sans-serif;
+  font-weight: 100;
+  font-size: 2.6rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  color: #000;
+  opacity: 0.85;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
 
-  // Form Style Goes here
-  .field{
-    margin: 20px auto;
-    border-top: 1px solid green;
-    border-bottom: 1px solid green;
-    .label{
-      position: relative;
-      font-size: 15px;
-      display: inline-block;
-    }
-    .main-input{
-      position: relative;
-      display: inline-block;
-      width: 50%;
-      padding: 1rem;
-    }
-  }
-
-  .btn-custom{
+}
+.main-text{
+  font-family: 'DINOT', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.85;
+}
+.sub-text{
+  font-family: 'DINOT', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.85;
+  margin-top: 2.7rem;
+}
+// Form Style Goes here
+.field{
+  margin: 20px auto;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  .label{
     position: relative;
-    margin: 20px auto;
+    display: inline-block;
+    font-family: 'DINOT', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    opacity: 0.85;
+  }
+  .main-input{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    padding: 1rem;
+  }
+}
+.btn-custom{
+  position: relative;
+  font-family: 'DINOT', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  word-spacing: 0.1rem;
+  color: #fff;
+  opacity: 0.85;
+  margin: 20px auto;
+
+}
+  .complete-page{
+    .Mockup{
+      padding-top: 3rem;
+    }
+    .Heading{
+      position: relative;
+      font-family: 'DINOT', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      word-spacing: 0.1rem;
+      color: #66a200;
+      opacity: 0.85;
+      margin-top: 0;
+    }
+    .main-text{
+      font-family: 'DINOT', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #000;
+      opacity: 0.85;
+    }
+    .btn-custom{
+      position: relative;
+      font-family: 'DINOT', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      word-spacing: 0;
+      letter-spacing: 0;
+      color: #fff;
+      opacity: 0.85;
+    }
   }
 `;
