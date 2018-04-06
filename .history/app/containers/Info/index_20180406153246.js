@@ -16,12 +16,6 @@ import { Grid, Container, Form } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import Button from "components/Button";
 import FormHeading from "components/FormHeading";
-import { Field } from 'redux-form'
-
-const options = [
-  { key: 'employee', text: 'Employee', value: 'employee' },
-  { key: 'spouse', text: 'Spouse', value: 'spouse' },
-]
 
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -47,16 +41,17 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
                     <input className="main-input" size='large' placeholder='Last Name' />
                   </Form.Field>
                   <Form.Field>
-                    <label className="label">First Name</label>
+                    <label className="label">Your Email</label>
                     <input className="main-input" size='large' placeholder='Last Name' />
                   </Form.Field>
+                  </Form.Field>
                   <Form.Field>
-                    <label className="label">Last Name</label>
+                    <label className="label">Your Email</label>
                     <input className="main-input" size='large' placeholder='Last Name' />
                   </Form.Field>
-                  <Form.Select fluid label='Employee/Spouse' options={options} placeholder='Select' />
+                  </Form.Field>
                   <Form.Field>
-                    <label className="label">HLCID</label>
+                    <label className="label">Your Email</label>
                     <input className="main-input" size='large' placeholder='Last Name' />
                   </Form.Field>
                 </Form>

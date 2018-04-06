@@ -16,7 +16,7 @@ import { Grid, Container, Form } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import Button from "components/Button";
 import FormHeading from "components/FormHeading";
-import { Field } from 'redux-form'
+
 
 const options = [
   { key: 'employee', text: 'Employee', value: 'employee' },

@@ -12,7 +12,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectInfo from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { Grid, Container, Form } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import Button from "components/Button";
 import FormHeading from "components/FormHeading";
