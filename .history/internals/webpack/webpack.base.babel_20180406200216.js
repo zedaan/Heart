@@ -35,12 +35,7 @@ module.exports = (options) => ({
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
       },
-      {
-        // Preprocess 3rd party .css files located in node_modules
-        test: /\.css$/,
-        include: /node_modules/,
-        use: ['style-loader', 'css-loader'],
-      },
+     
       {
         test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
         use: 'file-loader',
@@ -48,8 +43,7 @@ module.exports = (options) => ({
       {
         test: /\.(png)$/,
         use: [
-          'file-loader?name=images/[name].[ext]',
-          'url-loader',
+          'file-loader',
           {
             loader: 'image-webpack-loader',
 
