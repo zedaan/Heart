@@ -46,6 +46,7 @@ export default function createReducer(injectedReducers) {
     route: routeReducer,
     global: globalReducer,
     form: formReducer,
+
     language: languageProviderReducer,
     ...injectedReducers,
   });

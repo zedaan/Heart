@@ -45,7 +45,6 @@ export default function createReducer(injectedReducers) {
   return combineReducers({
     route: routeReducer,
     global: globalReducer,
-    form: formReducer,
     language: languageProviderReducer,
     ...injectedReducers,
   });

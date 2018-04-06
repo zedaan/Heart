@@ -8,9 +8,8 @@ export function defaultAction() {
   };
 }
 
-export function submitAction(payload) {
+export function submitAction() {
   return {
     typr: c.SUBMIT_ACTION,
-    payload
   }
 }

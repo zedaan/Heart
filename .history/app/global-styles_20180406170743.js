@@ -245,6 +245,5 @@ injectGlobal`
 .error{
   color:red;
   width:70%;
-  float:right;
 }
 `;

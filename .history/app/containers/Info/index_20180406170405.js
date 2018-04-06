@@ -22,7 +22,7 @@ import * as a from './actions';
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   onSubmit = (value) => {
-    this.props.submitAction()
+
   }
 
   render() {
@@ -69,7 +69,6 @@ const mapStateToProps = createStructuredSelector({
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
-    submitAction: (payload) => dispatch(a.submitAction(payload))
   };
 }
 

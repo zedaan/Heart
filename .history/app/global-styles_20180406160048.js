@@ -124,14 +124,11 @@ injectGlobal`
     background-color: transparent;
   }
 }
-.ui.form .field:last-child{
 
-  border-bottom: 1px solid #a7a7a7;
-}
 .ui.form .field{
   border-top: 1px solid #a7a7a7;
   margin-bottom: 0;
-  .label{
+  .label, .ui.form .field > label{
     position: relative;
     display: inline-block !important;
     font-family: 'DINOT', sans-serif;
@@ -141,52 +138,23 @@ injectGlobal`
     opacity: 0.85;
     line-height: 3rem;
   }
-  .main-input{
+  .main-input, .selection.dropdown{
     position: relative;
     display: inline-block;
     width: 70%;
     float:right;
     padding: 1rem;
     float: right;
-    border:none;
     background-color: transparent;
   }
-
-  .main-input::placeholder {
-    color:#9f9f9f;
+  .dropdown{
+    width:50%;
   }
+  .ui.form .field > .selection.dropdown
 }
-.ui.form select .select{
-  color:#9f9f9f;
-
-}
-.ui.form select:focus{
-  outline:none;
-}
-.ui.form select{
-  width:50%;
-  border:none;
-  position: relative;
-  display: inline-block;
-  float:right;
-  padding: 1rem;
-  float: right;
-  border:none;
-  background-color: transparent;
-}
-.ui.form .field > label{
-  display: inline-block;
-  font-family: 'DINOT', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000;
-  opacity: 0.85;
-  line-height: 3rem;
-}
-.ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="url"]:focus{
+.ui.form .field input:not([type]):focus{
   border-color: transparent;
   border-radius: 0;
-  background:transparent;
 }
 .ui.form .field input:not([type]){
   border: 0;
@@ -202,49 +170,40 @@ injectGlobal`
   margin: 20px auto;
 
 }
-.btn-custom:focus{
-  outline:none;
-}
-  
-.complete-page{
-  .Mockup{
-    padding-top: 3rem;
+  .complete-page{
+    .Mockup{
+      padding-top: 3rem;
+    }
+    .Heading{
+      position: relative;
+      font-family: 'DINOT', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      word-spacing: 0.1rem;
+      color: #66a200;
+      opacity: 0.85;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .main-text{
+      font-family: 'DINOT', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #000;
+      opacity: 0.85;
+    }
+    .btn-custom{
+      position: relative;
+      font-family: 'DINOT', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      word-spacing: 0;
+      letter-spacing: 0;
+      color: #fff;
+      opacity: 0.85;
+    }
   }
-  .Heading{
-    position: relative;
-    font-family: 'DINOT', sans-serif;
-    font-weight: 800;
-    font-size: 3rem;
-    word-spacing: 0.1rem;
-    color: #66a200;
-    opacity: 0.85;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .main-text{
-    font-family: 'DINOT', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #000;
-    opacity: 0.85;
-  }
-  .btn-custom{
-    position: relative;
-    font-family: 'DINOT', sans-serif;
-    font-size: 1rem;
+  .primaryHeading{
     font-weight: 600;
-    word-spacing: 0;
-    letter-spacing: 0;
-    color: #fff;
-    opacity: 0.85;
   }
-}
-.primaryHeading{
-  font-weight: 600;
-}
-.error{
-  color:red;
-  width:70%;
-  float:right;
-}
 `;

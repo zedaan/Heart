@@ -156,12 +156,9 @@ injectGlobal`
     color:#9f9f9f;
   }
 }
-.ui.form select .select{
+.ui.form select::placeholder{
   color:#9f9f9f;
 
-}
-.ui.form select:focus{
-  outline:none;
 }
 .ui.form select{
   width:50%;
@@ -202,49 +199,40 @@ injectGlobal`
   margin: 20px auto;
 
 }
-.btn-custom:focus{
-  outline:none;
-}
-  
-.complete-page{
-  .Mockup{
-    padding-top: 3rem;
+  .complete-page{
+    .Mockup{
+      padding-top: 3rem;
+    }
+    .Heading{
+      position: relative;
+      font-family: 'DINOT', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      word-spacing: 0.1rem;
+      color: #66a200;
+      opacity: 0.85;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .main-text{
+      font-family: 'DINOT', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #000;
+      opacity: 0.85;
+    }
+    .btn-custom{
+      position: relative;
+      font-family: 'DINOT', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      word-spacing: 0;
+      letter-spacing: 0;
+      color: #fff;
+      opacity: 0.85;
+    }
   }
-  .Heading{
-    position: relative;
-    font-family: 'DINOT', sans-serif;
-    font-weight: 800;
-    font-size: 3rem;
-    word-spacing: 0.1rem;
-    color: #66a200;
-    opacity: 0.85;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .main-text{
-    font-family: 'DINOT', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #000;
-    opacity: 0.85;
-  }
-  .btn-custom{
-    position: relative;
-    font-family: 'DINOT', sans-serif;
-    font-size: 1rem;
+  .primaryHeading{
     font-weight: 600;
-    word-spacing: 0;
-    letter-spacing: 0;
-    color: #fff;
-    opacity: 0.85;
   }
-}
-.primaryHeading{
-  font-weight: 600;
-}
-.error{
-  color:red;
-  width:70%;
-  float:right;
-}
 `;

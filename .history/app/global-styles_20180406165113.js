@@ -242,9 +242,4 @@ injectGlobal`
 .primaryHeading{
   font-weight: 600;
 }
-.error{
-  color:red;
-  width:70%;
-  float:right;
-}
 `;

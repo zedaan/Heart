@@ -16,15 +16,13 @@ import { Grid, Container } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import Button from "components/Button";
 import FormHeading from "components/FormHeading";
-import Form from './Form';
-import * as a from './actions';
+
+const options = [
+  { key: 'employee', text: 'Employee', value: 'employee' },
+  { key: 'spouse', text: 'Spouse', value: 'spouse' },
+]
 
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
-  onSubmit = (value) => {
-    this.props.submitAction()
-  }
-
   render() {
     return (
       <div>
@@ -42,7 +40,7 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
             </Grid.Row>
             <Grid.Row columns={1}>
               <Grid.Column>
-                <Form  onSubmit={this.onSubmit}/>
+                <Form />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
@@ -69,7 +67,6 @@ const mapStateToProps = createStructuredSelector({
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
-    submitAction: (payload) => dispatch(a.submitAction(payload))
   };
 }
 
