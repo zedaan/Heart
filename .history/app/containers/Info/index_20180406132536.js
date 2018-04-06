@@ -29,9 +29,9 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
         <Container>
           <Grid>
             <Grid.Row>
-              <Grid.Column>
-                <FormHeading text="Add your Info!" textAlign="center"/>
-              </Grid.Column>
+              <GridColumn>
+                <FormHeading text="Add your Info!"/>
+              </GridColumn>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>

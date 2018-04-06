@@ -49,17 +49,22 @@ module.exports = (options) => ({
         test: /\.(png)$/,
         use: [
           'file-loader',
-          'url-loader',
           {
             loader: 'image-webpack-loader',
-
-          }
-          
+            options: {
+              progressive: true,
+              optimizationLevel: 7,
+              interlaced: false,
+              pngquant: {
+                quality: '65-90',
+                speed: 4,
+              },
+            },
+          },
         ]
-      },
-
+      }
       {
-        test: /\.(jpg|gif)$/,
+        test: /\.(jpg|png|gif)$/,
         use: [
           'file-loader',
           {
@@ -95,8 +100,6 @@ module.exports = (options) => ({
       },
     ],
   },
-
-  
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({
       // make fetch available
@@ -126,7 +129,6 @@ module.exports = (options) => ({
       'main',
     ],
   },
-  
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
   performance: options.performance || {},

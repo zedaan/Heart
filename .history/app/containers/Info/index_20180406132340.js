@@ -15,7 +15,7 @@ import saga from './saga';
 import { Grid, Container } from 'semantic-ui-react';
 import { Wrapper } from 'components/Wrapper'
 import Button from "components/Button";
-import FormHeading from "components/FormHeading";
+import ColorHeading from "components/ColorHeading";
 
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -28,11 +28,7 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
 
         <Container>
           <Grid>
-            <Grid.Row>
-              <Grid.Column>
-                <FormHeading text="Add your Info!" textAlign="center"/>
-              </Grid.Column>
-            </Grid.Row>
+
             <Grid.Row>
               <Grid.Column>
                 <Button text="Start Now"/>

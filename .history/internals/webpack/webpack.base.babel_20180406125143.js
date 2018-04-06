@@ -50,10 +50,6 @@ module.exports = (options) => ({
         use: [
           'file-loader',
           'url-loader',
-          {
-            loader: 'image-webpack-loader',
-
-          }
           
         ]
       },

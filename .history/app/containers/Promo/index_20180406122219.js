@@ -27,7 +27,7 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
             <meta name="description" content="Description of Promo" />
           </Helmet>
           <Wrapper>
-          <Container textAlign="center">
+            <Container textAlign="center">
             <Grid.Row>
               <Grid.Column>
                   <Header />
