@@ -31,21 +31,20 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
-  }
-
-  body {
     font-family: 'DINOT', sans-serif;
   }
 
   #app {
-    min-height: 100%;
-    min-width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     background: url(${image});
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
   }
-
+  .height{
+    height: 100vh;
+  }
   p,
   label {
     font-family: 'DINOT', sans-serif;
@@ -105,8 +104,8 @@ injectGlobal`
 // Form Style Goes here
 .field{
   margin: 20px auto;
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #a7a7a7;
+  border-bottom: 1px solid #a7a7a7;
   .label{
     position: relative;
     display: inline-block;
@@ -147,10 +146,11 @@ injectGlobal`
       color: #66a200;
       opacity: 0.85;
       margin-top: 0;
+      margin-bottom: 0;
     }
     .main-text{
       font-family: 'DINOT', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: #000;
       opacity: 0.85;
