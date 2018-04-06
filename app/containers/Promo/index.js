@@ -21,15 +21,15 @@ import Button from '../../components/Button';
 export class Promo extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <div className="height">
           <Helmet>
             <title>Promo</title>
             <meta name="description" content="Description of Promo" />
           </Helmet>
-          <Wrapper>
-          <Container textAlign="center">
-            <Grid.Row>
-              <Grid.Column>
+          <Wrapper className="height">
+          <Container textAlign="center" className="height">
+            <Grid.Row className="height">
+              <Grid.Column className="height" >
                   <Header />
                   <Heading text="It's your heart's full picture."/>
                   <p className="main-text"> if your employer offers Hello Heart, your
