@@ -73,7 +73,7 @@ injectGlobal`
     
   }
   h2{
-    font-size:22pt;
+    font-size:20pt;
   }
   p,label, input, span {
     font-family: "San Francisco Display Thin";
@@ -226,14 +226,14 @@ injectGlobal`
   .label{
     position: relative;
     display: inline-block !important;
-    font-size: 16px;
+    font-size: 17pt;
     color: #000;
     opacity: 0.85;
     line-height: 17pt;
     padding:0.7em 0;
   }
   .main-input{
-    font-size: 16px;
+    font-size: 17pt;
     line-height: 17pt;
     position: relative;
     display: inline-block;
@@ -330,7 +330,11 @@ injectGlobal`
 
 .error{
   display: block;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-left: 15px;
   color:red;
   width:60%;
   text-align:left;

@@ -330,7 +330,9 @@ injectGlobal`
 
 .error{
   display: block;
+  position: absolute;
   float: right;
+  padding-left: 15px;
   color:red;
   width:60%;
   text-align:left;

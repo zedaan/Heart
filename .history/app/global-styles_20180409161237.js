@@ -233,7 +233,7 @@ injectGlobal`
     padding:0.7em 0;
   }
   .main-input{
-    font-size: 16px;
+    font-size: 17pt;
     line-height: 17pt;
     position: relative;
     display: inline-block;
@@ -330,7 +330,11 @@ injectGlobal`
 
 .error{
   display: block;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-left: 15px;
   color:red;
   width:60%;
   text-align:left;

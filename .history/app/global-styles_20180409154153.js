@@ -70,10 +70,7 @@ injectGlobal`
   }
   h1,h2,h3,h4,h5,h6{
     font-family: 'DINOT', sans-serif;
-    
-  }
-  h2{
-    font-size:22pt;
+    font-size: 36pt;
   }
   p,label, input, span {
     font-family: "San Francisco Display Thin";
@@ -141,9 +138,8 @@ injectGlobal`
   position:absolute !important;
   padding-top: 10px;
   top:0;
-  width:200px !important;
   left:50%;;
-  margin-left:-100px !important;
+  margin-left:-150px !important;
 }
 
 // Typography Goes here
@@ -152,17 +148,19 @@ injectGlobal`
   font-family: 'DINOT', sans-serif;
   font-style: bold;
   font-weight: 100;
-  font-size: 36pt;
+  font-size: 40pt;
   word-spacing: 0.1rem;
   letter-spacing: 0.1rem;
-  line-height:36pt;
+  line-height:40pt;
   color: #000;
   opacity: 0.85;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
 
 }
 .main-text{
   font-family: "San Francisco Display Thin";
-  font-size: 16px;
+  font-size: 17pt;
   color: #000;
   opacity: 0.85;
   letter-spacing:0.6px;
@@ -180,11 +178,10 @@ injectGlobal`
   opacity: 0.85;
   // margin-top: 2.7rem;
   position:absolute;
-  bottom:6rem;
+  bottom:3rem;
   left:0;
   right:0;
 }
-
 // Form Style Goes here
 #Main-Form .field{
   position:relative;
@@ -192,17 +189,16 @@ injectGlobal`
   border-bottom: 1px solid rgb(216,216,216);
   text-align:left;
   padding-left:20px;
-  height:50px;
+  height:44pt;
   .label{
     position: relative;
     display: inline;
-    font-size: 16px;
+    font-size: 17pt;
     color: #000;
     opacity: 0.85;
     font-family: "San Francisco Display Thin", sans-serif;
   }
   .main-input{
-    font-size: 16px;
     position: relative;
     display: inline-block;
     width: 50%;
@@ -222,18 +218,18 @@ injectGlobal`
   margin-bottom: 0;
   text-align:left;
   padding-left:20px;
-  height:50px;
+  height:44pt;
   .label{
     position: relative;
     display: inline-block !important;
-    font-size: 16px;
+    font-size: 17pt;
     color: #000;
     opacity: 0.85;
     line-height: 17pt;
     padding:0.7em 0;
   }
   .main-input{
-    font-size: 16px;
+    font-size: 17pt;
     line-height: 17pt;
     position: relative;
     display: inline-block;
@@ -287,12 +283,12 @@ injectGlobal`
 .btn-custom{
   position: relative;
   font-family: "San Francisco Display Semibold";
-  font-size: 18px;
+  font-size: 18pt;
   word-spacing: 0.1rem;
   color: #fff;
   opacity: 0.85;
   margin-top:10px;
-  height:50px;
+  height:44pt;
 
 }
 .btn-custom:focus{
@@ -330,7 +326,11 @@ injectGlobal`
 
 .error{
   display: block;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-left: 15px;
   color:red;
   width:60%;
   text-align:left;
@@ -360,14 +360,12 @@ injectGlobal`
   font-family: "San Francisco Display Thin" !important;
 }
 
-body{
-  
-  overflow:hidden;
-}
 @media(min-width: 768px){
-  h2{
-    font-size: 32pt;
+  body{
+    
+    overflow:hidden;
   }
+
   .table{
      min-width:50%;
   }
@@ -392,9 +390,6 @@ body{
     .btn-custom{
       width:100%;
     }
-  }
-  .sub-text{
-    bottom:3rem;
   }
 }
 

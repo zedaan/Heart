@@ -237,7 +237,7 @@ injectGlobal`
     line-height: 17pt;
     position: relative;
     display: inline-block;
-    width: 60%;
+    width: 70%;
     float:right;
     border:none;
     padding-left:0;
@@ -330,7 +330,11 @@ injectGlobal`
 
 .error{
   display: block;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-left: 15px;
   color:red;
   width:60%;
   text-align:left;

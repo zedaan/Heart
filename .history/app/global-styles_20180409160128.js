@@ -72,9 +72,6 @@ injectGlobal`
     font-family: 'DINOT', sans-serif;
     
   }
-  h2{
-    font-size:22pt;
-  }
   p,label, input, span {
     font-family: "San Francisco Display Thin";
     font-weight:bold;
@@ -141,9 +138,8 @@ injectGlobal`
   position:absolute !important;
   padding-top: 10px;
   top:0;
-  width:200px !important;
   left:50%;;
-  margin-left:-100px !important;
+  margin-left:-75px !important;
 }
 
 // Typography Goes here
@@ -158,6 +154,8 @@ injectGlobal`
   line-height:36pt;
   color: #000;
   opacity: 0.85;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
 
 }
 .main-text{
@@ -180,11 +178,10 @@ injectGlobal`
   opacity: 0.85;
   // margin-top: 2.7rem;
   position:absolute;
-  bottom:6rem;
+  bottom:3rem;
   left:0;
   right:0;
 }
-
 // Form Style Goes here
 #Main-Form .field{
   position:relative;
@@ -192,7 +189,7 @@ injectGlobal`
   border-bottom: 1px solid rgb(216,216,216);
   text-align:left;
   padding-left:20px;
-  height:50px;
+  height:45px;
   .label{
     position: relative;
     display: inline;
@@ -226,14 +223,14 @@ injectGlobal`
   .label{
     position: relative;
     display: inline-block !important;
-    font-size: 16px;
+    font-size: 17pt;
     color: #000;
     opacity: 0.85;
     line-height: 17pt;
     padding:0.7em 0;
   }
   .main-input{
-    font-size: 16px;
+    font-size: 17pt;
     line-height: 17pt;
     position: relative;
     display: inline-block;
@@ -292,7 +289,7 @@ injectGlobal`
   color: #fff;
   opacity: 0.85;
   margin-top:10px;
-  height:50px;
+  height:45px;
 
 }
 .btn-custom:focus{
@@ -330,7 +327,11 @@ injectGlobal`
 
 .error{
   display: block;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-left: 15px;
   color:red;
   width:60%;
   text-align:left;
@@ -360,13 +361,13 @@ injectGlobal`
   font-family: "San Francisco Display Thin" !important;
 }
 
-body{
-  
-  overflow:hidden;
-}
 @media(min-width: 768px){
+  body{
+    
+    overflow:hidden;
+  }
   h2{
-    font-size: 32pt;
+    font-size: 36pt;
   }
   .table{
      min-width:50%;
@@ -392,9 +393,6 @@ body{
     .btn-custom{
       width:100%;
     }
-  }
-  .sub-text{
-    bottom:3rem;
   }
 }
 
