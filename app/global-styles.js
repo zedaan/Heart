@@ -3,6 +3,41 @@ import image from 'images/bg1.jpg'
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+
+@font-face {
+  font-family: "San Francisco Display Ultralight";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight") format("svg")
+}
+
+@font-face {
+  font-family: "San Francisco Display Thin";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.svg#San Francisco Display Thin") format("svg")
+}
+
+@font-face {
+  font-family: "San Francisco Display Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.svg#San Francisco Display Medium") format("svg")
+}
+
+@font-face {
+  font-family: "San Francisco Display Semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold") format("svg")
+}
+
+@font-face {
+  font-family: "San Francisco Display Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
+}
   @font-face {
     font-family: 'DINOT';
     font-style: light;
@@ -31,14 +66,15 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
-    font-family: 'DINOT', sans-serif;
+    font-family: "San Francisco Display Thin", sans-serif;
   }
   h1,h2,h3,h4,h5,h6{
     font-family: 'DINOT', sans-serif;
     font-size: 36pt;
   }
-  p,label, input, span, button {
-    font-family: 'DINOT', sans-serif !important;
+  p,label, input, span {
+    font-family: "San Francisco Display Thin";
+    font-weight:bold;
   }
 
   .table{
@@ -79,14 +115,14 @@ injectGlobal`
 }
 
 .btn-heart{
+  font-family: "San Francisco Display Semibold";
   color:white;
   width:100%;
   text-transform: uppercase;
   letter-spacing:0.7px;
-  font-weight:400;
   border-radius: 30px;
   height:44pt;
-  font-size:17pt;
+  font-size:18pt;
 
 }
 .bg-primary{
@@ -100,7 +136,7 @@ injectGlobal`
 
 .float-top{
   position:absolute !important;
-  padding-top: 2rem;
+  padding-top: 10px;
   top:0;
   left:50%;;
   margin-left:-150px !important;
@@ -110,11 +146,12 @@ injectGlobal`
 .Main-Heading{
   position: relative;
   font-family: 'DINOT', sans-serif;
-  font-weight: 400;
-  font-size: 36pt;
+  font-style: bold;
+  font-weight: 100;
+  font-size: 40pt;
   word-spacing: 0.1rem;
   letter-spacing: 0.1rem;
-  line-height:36pt;
+  line-height:40pt;
   color: #000;
   opacity: 0.85;
   margin-top: 5rem;
@@ -127,6 +164,7 @@ injectGlobal`
   font-weight: 400;
   color: #000;
   opacity: 0.85;
+  margin-bottom:0;
 }
 .sub-text{
   font-family: 'DINOT', sans-serif;
@@ -143,7 +181,6 @@ injectGlobal`
 // Form Style Goes here
 #Main-Form .field{
   position:relative;
-  margin: 20px auto;
   border-top: 1px solid rgb(216,216,216);
   border-bottom: 1px solid rgb(216,216,216);
   text-align:left;
@@ -151,17 +188,16 @@ injectGlobal`
   .label{
     position: relative;
     display: inline;
-    font-family: 'DINOT', sans-serif;
     font-size: 17pt;
-    font-weight: 400;
     color: #000;
     opacity: 0.85;
+    font-family: "San Francisco Display Thin", sans-serif;
     line-height: 3rem;
   }
   .main-input{
     position: relative;
     display: inline-block;
-    width: 70%;
+    width: 50%;
     padding: 1rem;
     padding-left:0;
     background-color: transparent;
@@ -172,7 +208,7 @@ injectGlobal`
   border-bottom: 1px solid rgb(216,216,216);
 }
 .ui.form .field{
-  font-family: 'DINOT';
+  
   position:relative;
   border-top: 1px solid rgb(216,216,216);
   margin-bottom: 0;
@@ -182,9 +218,7 @@ injectGlobal`
   .label{
     position: relative;
     display: inline-block !important;
-    font-family: 'DINOT', sans-serif;
     font-size: 17pt;
-    font-weight: 400;
     color: #000;
     opacity: 0.85;
     line-height: 17pt;
@@ -227,15 +261,13 @@ injectGlobal`
   border:none;
   background-color: transparent;
 }
-.ui.form .field > label{
-  display: inline-block;
-  font-family: 'DINOT', sans-serif;
-  font-size: 17pt;
-  font-weight: 600;
-  color: #000;
-  opacity: 0.85;
-  line-height: 17pt;
-}
+// .ui.form .field > label{
+//   display: inline-block;
+//   font-size: 17pt;
+//   color: #000;
+//   opacity: 0.85;
+//   line-height: 17pt;
+// }
 .ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="url"]:focus{
   border-color: transparent;
   border-radius: 0;
@@ -246,9 +278,8 @@ injectGlobal`
 }
 .btn-custom{
   position: relative;
-  font-family: 'DINOT', sans-serif;
-  font-size: 17pt;
-  font-weight: 400;
+  font-family: "San Francisco Display Semibold";
+  font-size: 18pt;
   word-spacing: 0.1rem;
   color: #fff;
   opacity: 0.85;
@@ -282,9 +313,6 @@ injectGlobal`
   }
   .btn-custom{
     position: relative;
-    font-family: 'DINOT', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
     word-spacing: 0;
     letter-spacing: 0.6px;
     color: #fff;
@@ -300,16 +328,19 @@ injectGlobal`
   padding-top: 10px;
   padding-left: 15px;
   color:red;
-  width:70%;
+  width:60%;
   text-align:left;
 }
 
 .warning, .register{
-  width:70%;
+  font-family: "San Francisco Display Thin";
+  width:60%;
   float:right;
   color:#c9c4c2;
   text-align:left;
   padding-left:15px;
+  font-size:13pt;
+  line-height:16pt
 }
 .register{
   color:#c9c4c2;
@@ -321,10 +352,9 @@ injectGlobal`
   background-color: transparent !important;
 }
 
-// .ui.form input:not([type]), .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="tel"], .ui.form input[type="text"], {
-//   font-family: 'DINOT', sans-serif;
-//   font-weight:400;
-// }
+.ui.form input:not([type]), .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="tel"], .ui.form input[type="text"]{
+  font-family: "San Francisco Display Thin" !important;
+}
 
 @media(min-width: 768px){
   body{
