@@ -47,7 +47,7 @@ injectGlobal`
     height:100vh;
     margin:auto ;
     min-width:100%;
-   
+
 
   }
   .table-middle-row{
@@ -94,6 +94,12 @@ injectGlobal`
 }
 .clr-primary{
   color: #66a200;
+}
+
+body.input-focused-home  .Header {
+  margin-top: -5px;
+  transition: .5s ease-in-out;
+  opacity: 0;
 }
 
 // Gloabal Claasses
@@ -209,7 +215,7 @@ injectGlobal`
 
 .ui.form select .select{
   color:#9f9f9f;
-  
+
 }
 .ui.form select:focus{
   outline:none;
@@ -328,7 +334,7 @@ injectGlobal`
 
 @media(min-width: 768px){
   body{
-    
+
     overflow:hidden;
   }
 
@@ -337,7 +343,7 @@ injectGlobal`
   }
   .table-middle-row{
     padding:0 20px;
-    
+
   }
   .btn-custom{
     width:50%;
