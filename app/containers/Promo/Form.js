@@ -37,7 +37,6 @@ const InputBox = (props) => {
         touched && ((error && <span className="error">{error}</span>))
       }
     </Form.Field>
-
   );
 }
 

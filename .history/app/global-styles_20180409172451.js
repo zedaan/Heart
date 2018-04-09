@@ -42,17 +42,17 @@ injectGlobal`
    font-family: 'FFDINStdLight';
    src: url('./Fonts/webfonts/363D4D_0_0.eot');
    src: url('./Fonts/webfonts/363D4D_0_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_0_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_0_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_0_0.ttf') format('truetype');}
-
-
+ 
+  
 @font-face {
   font-family: 'FFDINStdRegular';src: url('./Fonts/webfonts/363D4D_1_0.eot');src: url('./Fonts/webfonts/363D4D_1_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_1_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_1_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_1_0.ttf') format('truetype');}
-
-
+ 
+  
 @font-face {
   font-family: 'FFDINStdMedium';
   src: url('./Fonts/webfonts/363D4D_2_0.eot');
   src: url('./Fonts/webfonts/363D4D_2_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_2_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_2_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_2_0.ttf') format('truetype');}
-
+ 
   html,
   body {
     height: 100%;
@@ -61,7 +61,7 @@ injectGlobal`
   }
   h1,h2,h3,h4,h5,h6{
     font-family: 'FFDINStdRegular';
-
+    
   }
   h2{
     font-size:22pt;
@@ -77,7 +77,7 @@ injectGlobal`
     height:100vh;
     margin:auto ;
     min-width:100%;
-
+   
 
   }
   .table-middle-row{
@@ -126,12 +126,6 @@ injectGlobal`
   color: #66a200;
 }
 
-body.input-focused-home  .Header {
-  margin-top: -5px;
-  transition: .5s ease-in-out;
-  opacity: 0;
-}
-
 // Gloabal Claasses
 
 .float-top{
@@ -164,7 +158,7 @@ body.input-focused-home  .Header {
   opacity: 0.85;
   letter-spacing:0.6px;
   margin:20px 0 !important;
-
+  
 }
 .main-text strong{
   font-family: "San Francisco Display SemiBold";
@@ -213,7 +207,7 @@ body.input-focused-home  .Header {
   border-bottom: 1px solid rgb(216,216,216);
 }
 .ui.form .field{
-
+  
   position:relative;
   border-top: 1px solid rgb(216,216,216);
   margin-bottom: 0;
@@ -248,7 +242,7 @@ body.input-focused-home  .Header {
 
 .ui.form select .select{
   color:#9f9f9f;
-
+  
 }
 .ui.form select:focus{
   outline:none;
@@ -358,20 +352,19 @@ body.input-focused-home  .Header {
 }
 
 body{
-
+  
   overflow:hidden;
 }
 @media(min-width: 768px){
-  body{
-
-    overflow:hidden;
+  h2{
+    font-size: 32pt;
   }
   .table{
      min-width:50%;
   }
   .table-middle-row{
     padding:0 20px;
-
+    
   }
   .btn-custom{
     width:50%;

@@ -38,21 +38,30 @@ injectGlobal`
   font-weight: 400;
   src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
 }
- @font-face {
-   font-family: 'FFDINStdLight';
-   src: url('./Fonts/webfonts/363D4D_0_0.eot');
-   src: url('./Fonts/webfonts/363D4D_0_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_0_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_0_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_0_0.ttf') format('truetype');}
-
-
-@font-face {
-  font-family: 'FFDINStdRegular';src: url('./Fonts/webfonts/363D4D_1_0.eot');src: url('./Fonts/webfonts/363D4D_1_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_1_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_1_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_1_0.ttf') format('truetype');}
-
-
-@font-face {
-  font-family: 'FFDINStdMedium';
-  src: url('./Fonts/webfonts/363D4D_2_0.eot');
-  src: url('./Fonts/webfonts/363D4D_2_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_2_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_2_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_2_0.ttf') format('truetype');}
-
+  @font-face {
+    font-family: 'DINOT';
+    font-style: light;
+    font-weight: 100;
+    src:
+      local('DINOT-light'),
+      url(./Fonts/DINOT-Light.otf) format('otf');
+  }
+  @font-face {
+    font-family: 'DINOT';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      local('DINOT'),
+      url(./Fonts/DINOT.otf) format('otf');
+  }
+  @font-face {
+    font-family: 'DINOT';
+    font-style: medium;
+    font-weight: 600;
+    src:
+      local('DINOT-Medium'),
+      url(./Fonts/DINOT-Medium.otf) format('otf');
+  }
   html,
   body {
     height: 100%;
@@ -60,15 +69,11 @@ injectGlobal`
     font-family: "San Francisco Display Thin", sans-serif;
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'FFDINStdRegular';
-
-  }
-  h2{
-    font-size:22pt;
+    font-family: 'DINOT', sans-serif;
+    font-size: 36pt;
   }
   p,label, input, span {
     font-family: "San Francisco Display Thin";
-    font-weight:bold;
   }
 
   .table{
@@ -77,7 +82,7 @@ injectGlobal`
     height:100vh;
     margin:auto ;
     min-width:100%;
-
+   
 
   }
   .table-middle-row{
@@ -109,11 +114,12 @@ injectGlobal`
 }
 
 .btn-heart{
-  font-family: "San Francisco Display Semibold";
+  font-family: "San Francisco Display Medium";
   color:white;
   width:100%;
   text-transform: uppercase;
   letter-spacing:0.7px;
+  font-weight:400;
   border-radius: 30px;
   height:44pt;
   font-size:18pt;
@@ -126,83 +132,71 @@ injectGlobal`
   color: #66a200;
 }
 
-body.input-focused-home  .Header {
-  margin-top: -5px;
-  transition: .5s ease-in-out;
-  opacity: 0;
-}
-
 // Gloabal Claasses
 
 .float-top{
   position:absolute !important;
-  padding-top: 10px;
+  padding-top: 2rem;
   top:0;
-  width:200px !important;
   left:50%;;
-  margin-left:-100px !important;
+  margin-left:-150px !important;
 }
 
 // Typography Goes here
 .Main-Heading{
   position: relative;
-  ffont-family: 'FFDINStdRegular', sans-serif;
-  font-style: bold;
-  font-weight: 100;
+  font-family: 'DINOT', sans-serif;
+  font-weight: 400;
   font-size: 36pt;
   word-spacing: 0.1rem;
   letter-spacing: 0.1rem;
   line-height:36pt;
   color: #000;
   opacity: 0.85;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
 
 }
 .main-text{
-  font-family: "San Francisco Display Thin";
-  font-size: 16px;
+  font-family: 'DINOT', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: #000;
   opacity: 0.85;
-  letter-spacing:0.6px;
-  margin:20px 0 !important;
-
-}
-.main-text strong{
-  font-family: "San Francisco Display SemiBold";
 }
 .sub-text{
-  ffont-family: 'FFDINStdRegular', sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   color: #000;
   opacity: 0.85;
   // margin-top: 2.7rem;
   position:absolute;
-  bottom:6rem;
+  bottom:3rem;
   left:0;
   right:0;
 }
-
 // Form Style Goes here
 #Main-Form .field{
   position:relative;
+  margin: 20px auto;
   border-top: 1px solid rgb(216,216,216);
   border-bottom: 1px solid rgb(216,216,216);
   text-align:left;
   padding-left:20px;
-  height:50px;
   .label{
     position: relative;
     display: inline;
-    font-size: 16px;
+    font-family: 'DINOT', sans-serif;
+    font-size: 17pt;
     color: #000;
     opacity: 0.85;
-    font-family: "San Francisco Display Thin", sans-serif;
+    line-height: 3rem;
   }
   .main-input{
-    font-size: 16px;
     position: relative;
     display: inline-block;
-    width: 50%;
+    width: 70%;
     padding: 1rem;
     padding-left:0;
     background-color: transparent;
@@ -213,24 +207,24 @@ body.input-focused-home  .Header {
   border-bottom: 1px solid rgb(216,216,216);
 }
 .ui.form .field{
-
+  
   position:relative;
   border-top: 1px solid rgb(216,216,216);
   margin-bottom: 0;
   text-align:left;
   padding-left:20px;
-  height:50px;
+  height:44pt;
   .label{
     position: relative;
     display: inline-block !important;
-    font-size: 16px;
+    font-size: 17pt;
     color: #000;
     opacity: 0.85;
     line-height: 17pt;
     padding:0.7em 0;
   }
   .main-input{
-    font-size: 16px;
+    font-size: 17pt;
     line-height: 17pt;
     position: relative;
     display: inline-block;
@@ -248,7 +242,7 @@ body.input-focused-home  .Header {
 
 .ui.form select .select{
   color:#9f9f9f;
-
+  
 }
 .ui.form select:focus{
   outline:none;
@@ -266,13 +260,13 @@ body.input-focused-home  .Header {
   border:none;
   background-color: transparent;
 }
-// .ui.form .field > label{
-//   display: inline-block;
-//   font-size: 17pt;
-//   color: #000;
-//   opacity: 0.85;
-//   line-height: 17pt;
-// }
+.ui.form .field > label{
+  display: inline-block;
+  font-size: 17pt;
+  color: #000;
+  opacity: 0.85;
+  line-height: 17pt;
+}
 .ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="url"]:focus{
   border-color: transparent;
   border-radius: 0;
@@ -284,12 +278,13 @@ body.input-focused-home  .Header {
 .btn-custom{
   position: relative;
   font-family: "San Francisco Display Semibold";
-  font-size: 18px;
+  font-size: 18pt;
+  font-weight: 400;
   word-spacing: 0.1rem;
   color: #fff;
   opacity: 0.85;
-  margin-top:10px;
-  height:50px;
+  margin: 20px auto;
+  height:44pt;
 
 }
 .btn-custom:focus{
@@ -300,7 +295,7 @@ body.input-focused-home  .Header {
 
   .Heading{
     position: relative;
-    ffont-family: 'FFDINStdRegular', sans-serif;
+    font-family: 'DINOT', sans-serif;
     font-weight: 800;
     font-size: 3rem;
     word-spacing: 0.1rem;
@@ -310,7 +305,7 @@ body.input-focused-home  .Header {
     margin-bottom: 0;
   }
   .main-text{
-    ffont-family: 'FFDINStdRegular', sans-serif;
+    font-family: 'DINOT', sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     color: #000;
@@ -327,21 +322,23 @@ body.input-focused-home  .Header {
 
 .error{
   display: block;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-left: 15px;
   color:red;
   width:60%;
   text-align:left;
 }
 
 .warning, .register{
-  font-family: "San Francisco Display Thin";
+  font-family: "San Francisco Display Semibold";
   width:60%;
   float:right;
   color:#c9c4c2;
   text-align:left;
   padding-left:15px;
-  font-size:13pt;
-  line-height:16pt
 }
 .register{
   color:#c9c4c2;
@@ -357,21 +354,18 @@ body.input-focused-home  .Header {
   font-family: "San Francisco Display Thin" !important;
 }
 
-body{
-
-  overflow:hidden;
-}
 @media(min-width: 768px){
   body{
-
+    
     overflow:hidden;
   }
+
   .table{
      min-width:50%;
   }
   .table-middle-row{
     padding:0 20px;
-
+    
   }
   .btn-custom{
     width:50%;
@@ -390,9 +384,6 @@ body{
     .btn-custom{
       width:100%;
     }
-  }
-  .sub-text{
-    bottom:3rem;
   }
 }
 

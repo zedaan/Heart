@@ -47,7 +47,7 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
             <Grid.Row>
               <Grid.Column >
                 <p className="main-text"> if your employer offers Hello Heart, your
-                  <strong> Employer Code </strong> has been sent in an emial,
+                  <strong className="medium"> Employer Code </strong> has been sent in an emial,
                   text, postcard, or pigeon :) Add it below!
                 </p>
                 <Form onSubmit={this.onSubmit} />

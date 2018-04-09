@@ -9,7 +9,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
   render() {
     return (
       <div className="Header">
-        <Image src={logo} className={this.props.className} size='small' centered/>
+        <Image src={logo} className={this.props.className} size='medium' centered/>
       </div>
     );  
   }

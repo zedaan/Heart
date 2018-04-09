@@ -38,7 +38,7 @@ export class Signup extends React.Component { // eslint-disable-line react/prefe
           <Grid>
             <Grid.Row columns={1}>
               <Grid.Column textAlign="center">
-                <FormHeading text="Set up your account" className="medium"/>
+                <FormHeading text="Set up your account" className="normal"/>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row columns={1}>
