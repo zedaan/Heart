@@ -49,9 +49,7 @@ injectGlobal`
  
   
 @font-face {
-  font-family: 'FFDINStdMedium';
-  src: url('./Fonts/webfonts/363D4D_2_0.eot');
-  src: url('./Fonts/webfonts/363D4D_2_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_2_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_2_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_2_0.ttf') format('truetype');}
+  font-family: 'FFDINStdMedium';src: url('webfonts/363D4D_2_0.eot');src: url('webfonts/363D4D_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/363D4D_2_0.woff2') format('woff2'),url('webfonts/363D4D_2_0.woff') format('woff'),url('webfonts/363D4D_2_0.ttf') format('truetype');}
  
   html,
   body {

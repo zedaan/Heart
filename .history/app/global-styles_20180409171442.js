@@ -39,19 +39,19 @@ injectGlobal`
   src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
 }
  @font-face {
-   font-family: 'FFDINStdLight';
-   src: url('./Fonts/webfonts/363D4D_0_0.eot');
-   src: url('./Fonts/webfonts/363D4D_0_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_0_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_0_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_0_0.ttf') format('truetype');}
+  font-family: 'FFDINStdLight';
+  src: url('webfonts/363D4D_0_0.ttf') format('truetype');
+}
  
   
 @font-face {
-  font-family: 'FFDINStdRegular';src: url('./Fonts/webfonts/363D4D_1_0.eot');src: url('./Fonts/webfonts/363D4D_1_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_1_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_1_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_1_0.ttf') format('truetype');}
+font-family: 'FFDINStdRegular';src: url('webfonts/363D4D_1_0.eot');src: url('webfonts/363D4D_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/363D4D_1_0.woff2') format('woff2'),url('webfonts/363D4D_1_0.woff') format('woff'),url('webfonts/363D4D_1_0.ttf') format('truetype');
+}
  
   
 @font-face {
-  font-family: 'FFDINStdMedium';
-  src: url('./Fonts/webfonts/363D4D_2_0.eot');
-  src: url('./Fonts/webfonts/363D4D_2_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_2_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_2_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_2_0.ttf') format('truetype');}
+font-family: 'FFDINStdMedium';src: url('webfonts/363D4D_2_0.eot');src: url('webfonts/363D4D_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/363D4D_2_0.woff2') format('woff2'),url('webfonts/363D4D_2_0.woff') format('woff'),url('webfonts/363D4D_2_0.ttf') format('truetype');
+}
  
   html,
   body {
@@ -60,7 +60,7 @@ injectGlobal`
     font-family: "San Francisco Display Thin", sans-serif;
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'FFDINStdRegular';
+    font-family: 'DINOT', sans-serif;
     
   }
   h2{
@@ -140,7 +140,7 @@ injectGlobal`
 // Typography Goes here
 .Main-Heading{
   position: relative;
-  ffont-family: 'FFDINStdRegular', sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-style: bold;
   font-weight: 100;
   font-size: 36pt;
@@ -164,7 +164,7 @@ injectGlobal`
   font-family: "San Francisco Display SemiBold";
 }
 .sub-text{
-  ffont-family: 'FFDINStdRegular', sans-serif;
+  font-family: 'DINOT', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   color: #000;
@@ -294,7 +294,7 @@ injectGlobal`
 
   .Heading{
     position: relative;
-    ffont-family: 'FFDINStdRegular', sans-serif;
+    font-family: 'DINOT', sans-serif;
     font-weight: 800;
     font-size: 3rem;
     word-spacing: 0.1rem;
@@ -304,7 +304,7 @@ injectGlobal`
     margin-bottom: 0;
   }
   .main-text{
-    ffont-family: 'FFDINStdRegular', sans-serif;
+    font-family: 'DINOT', sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     color: #000;
