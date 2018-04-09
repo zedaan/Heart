@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form/immutable';
 import { Grid, Form, Input, Select, Label } from 'semantic-ui-react';
 import Button from "components/Button";
+
+let body = document.querySelector("body");
 
 
 const validations = (values) => {
@@ -26,15 +29,23 @@ const validations = (values) => {
     return errors;
 }
 
+const inputClick = () => {
+  body.classList.add("input-focused-home");
+}
 
+body.addEventListener('click',function (e) {
+  if (!e.target.classList.contains('main-input')){
+    body.classList.remove("input-focused-home");
+  }
+})
 
 const InputBox = (props) => {
     props.input.value = props.val;
-    const { type, input, placeholder, autoComplete, name, checked, className, label, meta: { touched, error } } = props;
+    const { type, input, placeholder, autoComplete, name, checked, className, onClick, label, meta: { touched, error } } = props;
     return (
         <Form.Field>
             <label className="label">{label}</label>
-            <input className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value} />
+            <input className="main-input" onClick={onClick} {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value} />
             {
                 touched && ((error && <span className="error">{error}</span>))
             }
@@ -52,13 +63,13 @@ let Login = (props) => {
     const { onSubmit, handleSubmit } = props;
 
     return (
-        <Form onSubmit={handleSubmit(onSubmit)} id="signup-form">
+        <Form onSubmit={handleSubmit(onSubmit)} >
 
-            <Field component={InputBox} type="email" autoComplete='email' label="Email" name="email" placeholder="Email" />
+            <Field onClick={inputClick} component={InputBox} type="email" autoComplete='email' label="Email" name="email" placeholder="Email" />
 
-            <Field component={InputBox} type="password" autoComplete='password' label="Password" name="password" placeholder="Password" />
-            <Button text="SIGN UP NOW!" />
-            <span className="register">By registering you agree to receive emails, calls and text messages from Hello Heart.Term of Use & Privacy Policy</span>
+            <Field onClick={inputClick} component={InputBox} type="password" autoComplete='password' label="Password" name="password" placeholder="Password" />
+            <Button text="LOGIN IN" />
+            <span className="register clr-primary"> <Link to="/">Need help?</Link></span>
 
         </Form>
 

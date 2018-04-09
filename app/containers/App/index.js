@@ -27,8 +27,8 @@ export default function App() {
       >
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
-      <div className="table">
-        <div className="table-middle-row">
+      <div id="table">
+        <div id="table-middle-row">
 
           <Switch>
               <Route exact path="/" component={Signup} />

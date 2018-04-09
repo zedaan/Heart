@@ -20,20 +20,27 @@ import * as a from './actions';
 
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
+  pageLoad = () => {
+    alert('ji');
+    document.getElementById('table-middle-row').className = "alpha"
+  }
+
   onSubmit = (value) => {
     this.props.history.push('/complete')
   }
 
+
   render() {
+
     return (
-      <div>
+      <div onLoad={this.pageLoad}>
         <Helmet>
           <title>Info</title>
           <meta name="description" content="Description of Info" />
         </Helmet>
 
 
-          <Container>
+        <Container>
             <Grid>
               <Grid.Row columns={1}>
                 <Grid.Column textAlign="center" >

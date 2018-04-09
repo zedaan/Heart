@@ -23,9 +23,14 @@ import { Wrapper } from 'components/Wrapper'
 import Button from '../../components/Button';
 
 export class Complete extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  
+  pageLoad = () => {
+    document.getElementById('table-middle-row').className = "alpha"
+  }
+
   render() {
     return (
-      <div>
+      <div onLoad={this.pageLoad}>
         <Helmet>
           <title>Complete</title>
           <meta name="description" content="Description of Complete" />

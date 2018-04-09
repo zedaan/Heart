@@ -26,9 +26,14 @@ export class Signup extends React.Component { // eslint-disable-line react/prefe
     } 
   }
 
+  pageLoad = () => {
+    alert('hi');
+    document.getElementById('table-middle-row').className = "alpha"
+  }
+
   render() {
     return (
-      <div>
+      <div onLoad={this.pageLoad}>
         <Helmet>
           <title>Signup</title>
           <meta name="description" content="Description of Signup" />

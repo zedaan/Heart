@@ -58,8 +58,10 @@ injectGlobal`
     font-family: "San Francisco Display Thin";
     font-weight:bold;
   }
-
-  .table{
+  .alpha{
+    background:linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8) ), url(${image}) !important;
+  }
+  #table{
     position: relative;
     display: table;
     height:100vh;
@@ -68,7 +70,7 @@ injectGlobal`
 
 
   }
-  .table-middle-row{
+  #table-middle-row{
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -103,11 +105,14 @@ injectGlobal`
   background-color: #66a200;
 }
 .clr-primary{
-  color: #66a200;
+  color: #66a200 !important;
 }
+a{
+  color: #66a200 !important;
 
+}
 body.input-focused-home  .Header {
-  margin-top: -10px;
+  margin-top: 5px;
   transition: .5s ease-in-out;
   opacity: 0;
 }
@@ -189,6 +194,9 @@ body.input-focused-home  .Header {
 
 #signup-form .field:nth-child(2){
   border-bottom: 1px solid rgb(216,216,216);
+}
+#login-form h2{
+  font-weight:400 !important;
 }
 .ui.form .field{
 
@@ -389,17 +397,22 @@ body.input-focused-home  .Header {
     margin:20px auto;
     margin-bottom:30px !important;
   }
-  .table{
+
+  .sub-text{
+    position:absolute;
+    bottom:6rem;
+  }
+  #table{
      min-width:50%;
   }
-  .table-middle-row{
+  #table-middle-row{
     padding:0 20px;
 
   }
   .btn-custom{
     width:50%;
   }
-  #signup-form .btn-custom, #Main-Form .btn-custom{
+  #signup-form .btn-custom, #Main-Form .btn-custom, #login-form .btn-custom{
     width:100%;
   }
   #info-form{

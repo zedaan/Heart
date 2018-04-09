@@ -25,26 +25,25 @@ export class Login extends React.Component { // eslint-disable-line react/prefer
       this.props.history.push('/promo')
     } 
   }
+  pageLoad = () => {
+    document.getElementById('table-middle-row').className = "alpha"
+  }
 
   render() {
     return (
-      <div>
+      <div onLoad={this.pageLoad}>
         <Helmet>
           <title>Login</title>
           <meta name="description" content="Description of Login" />
         </Helmet>
 
-
-
-
-       
             <Header className="float-top"/>
-            <Container>
+            <Container id="login-form">
               
               <Grid>
                 <Grid.Row columns={1}>
-                  <Grid.Column textAlign="center" style={{ marginBottom: '3rem' }}>
-                    <FormHeading text="Welcome Back!" className="normal" />
+                  <Grid.Column textAlign="center">
+                    <FormHeading text="Welcome Back!" />
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={1}>
