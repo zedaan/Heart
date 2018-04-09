@@ -36,11 +36,11 @@ injectGlobal`
   h1,h2,h3,h4,h5,h6{
     font-family: 'DINOT', sans-serif;
     font-size: 36pt;
+    font-weight:400;
   }
   p,label, input, span, button {
-    font-family: 'DINOT', sans-serif !important;
+    font-family: 'DINOT', sans-serif !impotrtant;
   }
-
   .table{
     position: relative;
     display: table;
@@ -78,33 +78,33 @@ injectGlobal`
     height: 100%;
 }
 
-.btn-heart{
-  color:white;
-  width:100%;
-  text-transform: uppercase;
-  letter-spacing:0.7px;
-  font-weight:400;
-  border-radius: 30px;
-  height:44pt;
-  font-size:17pt;
+  .btn-heart{
+    color:white;
+    width:100%;
+    text-transform: uppercase;
+    letter-spacing:0.7px;
+    font-weight:400;
+    border-radius: 30px;
+    height:44pt;
+    font-size:17pt;
 
-}
-.bg-primary{
-  background-color: #66a200;
-}
-.clr-primary{
-  color: #66a200;
-}
+  }
+  .bg-primary{
+    background-color: #66a200;
+  }
+  .clr-primary{
+    color: #66a200;
+  }
 
-// Gloabal Claasses
+  // Gloabal Claasses
 
-.float-top{
-  position:absolute !important;
-  padding-top: 2rem;
-  top:0;
-  left:50%;;
-  margin-left:-150px !important;
-}
+  .float-top{
+    position:absolute !important;
+    padding-top: 2rem;
+    top:0;
+    left:50%;;
+    margin-left:-150px !important;
+  }
 
 // Typography Goes here
 .Main-Heading{
@@ -247,8 +247,8 @@ injectGlobal`
 .btn-custom{
   position: relative;
   font-family: 'DINOT', sans-serif;
-  font-size: 17pt;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 600;
   word-spacing: 0.1rem;
   color: #fff;
   opacity: 0.85;
@@ -307,14 +307,13 @@ injectGlobal`
 .warning, .register{
   width:70%;
   float:right;
-  color:#c9c4c2;
+  color:#9f9f9f;
   text-align:left;
   padding-left:15px;
 }
 .register{
-  color:#c9c4c2;
+  color:#9f9f9f;
   width:100%;
-  font-size:13pt;
   text-align:center;
 }
 .ui.form input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {

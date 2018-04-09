@@ -307,7 +307,7 @@ injectGlobal`
 .warning, .register{
   width:70%;
   float:right;
-  color:#c9c4c2;
+  color:#9f9f9f;
   text-align:left;
   padding-left:15px;
 }
