@@ -20,7 +20,7 @@ injectGlobal`
       url(./Fonts/DINOT.otf) format('otf');
   }
   @font-face {
-    font-family: 'DINOT';
+    font-family: 'DINOT-medium';
     font-style: medium;
     font-weight: 600;
     src:
@@ -45,7 +45,6 @@ injectGlobal`
   h1,h2,h3,h4,h5,h6{
     font-family: 'DINOT', sans-serif;
     font-size: 36pt;
-    font-weight:400;
   }
   .table-middle-row{
     display: table-cell;
@@ -152,8 +151,8 @@ injectGlobal`
     position: relative;
     display: inline;
     font-family: 'DINOT', sans-serif;
-    font-size: 17pt;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 600;
     color: #000;
     opacity: 0.85;
     line-height: 3rem;
@@ -183,18 +182,18 @@ injectGlobal`
     position: relative;
     display: inline-block !important;
     font-family: 'DINOT', sans-serif;
-    font-size: 17pt;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 600;
     color: #000;
     opacity: 0.85;
-    line-height: 17pt;
+    line-height: 3rem;
   }
   .main-input{
     position: relative;
     display: inline-block;
     width: 70%;
     float:right;
-    padding: 17pt;
+    padding: 1rem;
     float: right;
     border:none;
     padding-left:0;
@@ -229,11 +228,11 @@ injectGlobal`
 .ui.form .field > label{
   display: inline-block;
   font-family: 'DINOT', sans-serif;
-  font-size: 17pt;
+  font-size: 1rem;
   font-weight: 600;
   color: #000;
   opacity: 0.85;
-  line-height: 17pt;
+  line-height: 3rem;
 }
 .ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="url"]:focus{
   border-color: transparent;

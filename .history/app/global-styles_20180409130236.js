@@ -152,8 +152,8 @@ injectGlobal`
     position: relative;
     display: inline;
     font-family: 'DINOT', sans-serif;
-    font-size: 17pt;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 600;
     color: #000;
     opacity: 0.85;
     line-height: 3rem;
@@ -187,7 +187,7 @@ injectGlobal`
     font-weight: 400;
     color: #000;
     opacity: 0.85;
-    line-height: 17pt;
+    line-height: 3rem;
   }
   .main-input{
     position: relative;
@@ -229,11 +229,11 @@ injectGlobal`
 .ui.form .field > label{
   display: inline-block;
   font-family: 'DINOT', sans-serif;
-  font-size: 17pt;
+  font-size: 1rem;
   font-weight: 600;
   color: #000;
   opacity: 0.85;
-  line-height: 17pt;
+  line-height: 3rem;
 }
 .ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="url"]:focus{
   border-color: transparent;
