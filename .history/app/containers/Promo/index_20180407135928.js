@@ -31,7 +31,7 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
 
   render() {
     return (
-      <div>
+      <div className="height">
           <Helmet>
             <title>Promo</title>
             <meta name="description" content="Description of Promo" />

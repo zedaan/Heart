@@ -37,9 +37,7 @@ injectGlobal`
     position: relative;
     display: table;
     height:100vh;
-    margin:auto ;
-    min-width:100%;
-   
+    margin:auto;
 
   }
   .table-middle-row{
@@ -51,6 +49,7 @@ injectGlobal`
     background-size: cover;
     background-position: center 0%;
     background-repeat: no-repeat;
+    width:100%;
   }
   #app{
     width:100%;
@@ -105,7 +104,7 @@ injectGlobal`
 .Main-Heading{
   position: relative;
   font-family: 'DINOT', sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 2.6rem;
   word-spacing: 0.1rem;
   letter-spacing: 0.1rem;
@@ -137,12 +136,9 @@ injectGlobal`
 }
 // Form Style Goes here
 #Main-Form .field{
-  position:relative;
   margin: 20px auto;
-  border-top: 1px solid rgb(216,216,216);
-  border-bottom: 1px solid rgb(216,216,216);
-  text-align:left;
-  padding-left:20px;
+  border-top: 1px solid #a7a7a7;
+  border-bottom: 1px solid #a7a7a7;
   .label{
     position: relative;
     display: inline;
@@ -156,22 +152,18 @@ injectGlobal`
   .main-input{
     position: relative;
     display: inline-block;
-    width: 70%;
+    width: 50%;
     padding: 1rem;
-    padding-left:0;
     background-color: transparent;
   }
 }
 
 #signup-form .field:nth-child(2){
-  border-bottom: 1px solid rgb(216,216,216);
+  border-bottom: 1px solid #a7a7a7;
 }
 .ui.form .field{
-  position:relative;
-  border-top: 1px solid rgb(216,216,216);
+  border-top: 1px solid #a7a7a7;
   margin-bottom: 0;
-  text-align:left;
-  padding-left:20px;
   .label{
     position: relative;
     display: inline-block !important;
@@ -190,7 +182,6 @@ injectGlobal`
     padding: 1rem;
     float: right;
     border:none;
-    padding-left:0;
     background-color: transparent;
   }
 
@@ -201,7 +192,7 @@ injectGlobal`
 
 .ui.form select .select{
   color:#9f9f9f;
-  
+
 }
 .ui.form select:focus{
   outline:none;
@@ -213,7 +204,6 @@ injectGlobal`
   display: inline-block;
   float:right;
   padding: 1rem;
-  padding-left:0;
   float: right;
   border:none;
   background-color: transparent;
@@ -244,7 +234,6 @@ injectGlobal`
   color: #fff;
   opacity: 0.85;
   margin: 20px auto;
-  height:44pt;
 
 }
 .btn-custom:focus{
@@ -284,14 +273,9 @@ injectGlobal`
 }
 
 .error{
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding-top: 10px;
-  padding-left: 15px;
   color:red;
   width:70%;
+  float:right;
   text-align:left;
 }
 
@@ -300,7 +284,6 @@ injectGlobal`
   float:right;
   color:#9f9f9f;
   text-align:left;
-  padding-left:15px;
 }
 .register{
   color:#9f9f9f;
@@ -319,9 +302,6 @@ injectGlobal`
   }
   h2{
     font-size: 2.5rem;
-  }
-  .table{
-     min-width:50%;
   }
   .table-middle-row{
     padding:0 20px;

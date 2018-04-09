@@ -207,13 +207,13 @@ injectGlobal`
   outline:none;
 }
 .ui.form select{
+  padding-left:0;
   width:60%;
   border:none;
   position: relative;
   display: inline-block;
   float:right;
   padding: 1rem;
-  padding-left:0;
   float: right;
   border:none;
   background-color: transparent;
@@ -300,7 +300,6 @@ injectGlobal`
   float:right;
   color:#9f9f9f;
   text-align:left;
-  padding-left:15px;
 }
 .register{
   color:#9f9f9f;

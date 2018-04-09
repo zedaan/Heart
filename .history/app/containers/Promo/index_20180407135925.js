@@ -31,30 +31,30 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
 
   render() {
     return (
-      <div>
+      <div className="height">
           <Helmet>
             <title>Promo</title>
             <meta name="description" content="Description of Promo" />
           </Helmet>
 
-          <Header className="float-top"/>
-          <Container textAlign="center" >
-            <Grid.Row>
-              <Grid.Column style={{marginBottom: '3rem'}}>
-                <Heading text="It's your heart's full picture." />
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row>
-              <Grid.Column >
-                <p className="main-text"> if your employer offers Hello Heart, your
-                  <strong> Employer Code </strong> has been sent in an emial,
-                  text, postcard, or pigeon :) Add it below!
-                </p>
-                <Form onSubmit={this.onSubmit} />
-                <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>
+            <Header className="float-top"/>
+            <Container textAlign="center" >
+              <Grid.Row>
+                <Grid.Column style={{marginBottom: '3rem'}}>
+                  <Heading text="It's your heart's full picture." />
                 </Grid.Column>
               </Grid.Row>
-            </Container>
+              <Grid.Row>
+                <Grid.Column >
+                  <p className="main-text"> if your employer offers Hello Heart, your
+                    <strong> Employer Code </strong> has been sent in an emial,
+                    text, postcard, or pigeon :) Add it below!
+                  </p>
+                  <Form onSubmit={this.onSubmit} />
+                  <p className="sub-text">Have an account? Log in <span className="clr-primary">&#187;</span></p>
+                  </Grid.Column>
+                </Grid.Row>
+              </Container>
       </div>
     );
   }

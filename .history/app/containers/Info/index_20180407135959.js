@@ -26,7 +26,7 @@ export class Info extends React.Component { // eslint-disable-line react/prefer-
 
   render() {
     return (
-      <div>
+      <div className="height">
         <Helmet>
           <title>Info</title>
           <meta name="description" content="Description of Info" />

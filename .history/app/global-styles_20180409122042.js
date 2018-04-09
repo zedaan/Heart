@@ -139,8 +139,8 @@ injectGlobal`
 #Main-Form .field{
   position:relative;
   margin: 20px auto;
-  border-top: 1px solid rgb(216,216,216);
-  border-bottom: 1px solid rgb(216,216,216);
+  border-top: 1px solid #a7a7a7;
+  border-bottom: 1px solid #a7a7a7;
   text-align:left;
   padding-left:20px;
   .label{
@@ -164,11 +164,11 @@ injectGlobal`
 }
 
 #signup-form .field:nth-child(2){
-  border-bottom: 1px solid rgb(216,216,216);
+  border-bottom: 1px solid #a7a7a7;
 }
 .ui.form .field{
   position:relative;
-  border-top: 1px solid rgb(216,216,216);
+  border-top: 1px solid #a7a7a7;
   margin-bottom: 0;
   text-align:left;
   padding-left:20px;
@@ -201,7 +201,7 @@ injectGlobal`
 
 .ui.form select .select{
   color:#9f9f9f;
-  
+
 }
 .ui.form select:focus{
   outline:none;
@@ -213,7 +213,6 @@ injectGlobal`
   display: inline-block;
   float:right;
   padding: 1rem;
-  padding-left:0;
   float: right;
   border:none;
   background-color: transparent;
@@ -300,7 +299,6 @@ injectGlobal`
   float:right;
   color:#9f9f9f;
   text-align:left;
-  padding-left:15px;
 }
 .register{
   color:#9f9f9f;

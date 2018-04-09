@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -8,21 +9,20 @@ import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import makeSelectLogin from './selectors';
+import makeSelectSignup from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import Button from "components/Button";
 import FormHeading from "components/FormHeading";
 import { Grid, Container } from 'semantic-ui-react';
-import LoginForm from './LoginForm';
-import Header from '../../components/Header'
+import SignupForm from './SignupForm';
 
+export class Signup extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
-export class Login extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   onSubmit = (value) => {
-    if (value.email !== '' && value.password !== '') {
-      this.props.history.push('/promo')
+    if(value.email !== '' && value.password !== ''){
+      this.props.history.push('/login')
     } 
   }
 
@@ -30,43 +30,37 @@ export class Login extends React.Component { // eslint-disable-line react/prefer
     return (
       <div>
         <Helmet>
-          <title>Login</title>
-          <meta name="description" content="Description of Login" />
+          <title>Signup</title>
+          <meta name="description" content="Description of Signup" />
         </Helmet>
-
-
-
-
        
-            <Header className="float-top"/>
             <Container>
-              
               <Grid>
                 <Grid.Row columns={1}>
                   <Grid.Column textAlign="center" style={{ marginBottom: '3rem' }}>
-                    <FormHeading text="Welcome Back!" className="normal" />
+                    <FormHeading text="Set up your account" className="medium"/>
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={1}>
                   <Grid.Column>
-                    <LoginForm onSubmit={this.onSubmit} />
+                    <SignupForm onSubmit={this.onSubmit} />
                   </Grid.Column>
                 </Grid.Row>
-
+              
               </Grid>
             </Container>
-         
+        
       </div>
     );
   }
 }
 
-Login.propTypes = {
+Signup.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
-  login: makeSelectLogin(),
+  signup: makeSelectSignup(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -77,11 +71,11 @@ function mapDispatchToProps(dispatch) {
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const withReducer = injectReducer({ key: 'login', reducer });
-const withSaga = injectSaga({ key: 'login', saga });
+const withReducer = injectReducer({ key: 'signup', reducer });
+const withSaga = injectSaga({ key: 'signup', saga });
 
 export default compose(
   withReducer,
   withSaga,
   withConnect,
-)(Login);
+)(Signup);

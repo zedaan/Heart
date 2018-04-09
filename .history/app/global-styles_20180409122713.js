@@ -300,7 +300,6 @@ injectGlobal`
   float:right;
   color:#9f9f9f;
   text-align:left;
-  padding-left:15px;
 }
 .register{
   color:#9f9f9f;

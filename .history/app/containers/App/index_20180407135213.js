@@ -28,19 +28,19 @@ export default function App() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
       <div className="table">
-        <div className="table-middle-row">
+        <div className="table-middle-row>
 
-          <Switch>
-              <Route exact path="/" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/Promo" component={Promo} />
-              <Route path="/start" component={Start} />
-              <Route path="/complete" component={Complete} />
-              <Route path="/info" component={Info} />
-              <Route path="" component={NotFoundPage} />
-          </Switch>
         </div>
       </div>
+        <Switch>
+            <Route exact path="/" component={Signup} />
+            <Route path="/login" component={Login} />
+            <Route path="/Promo" component={Promo} />
+            <Route path="/start" component={Start} />
+            <Route path="/complete" component={Complete} />
+            <Route path="/info" component={Info} />
+            <Route path="" component={NotFoundPage} />
+        </Switch>
     </AppWrapper>
   );
 }
