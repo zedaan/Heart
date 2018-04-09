@@ -4,6 +4,17 @@ import { reduxForm, Field } from 'redux-form/immutable';
 import { Grid, Checkbox, Form, Input, Radio, Select, TextArea, Search, Label } from 'semantic-ui-react';
 import Button from '../../components/Button';
 
+let body = document.querySelector("body");
+
+const inputClick = () => {
+  body.classList.add("input-focused-home");
+}
+
+body.addEventListener('click',function (e) {
+  if (!e.target.classList.contains('main-input')){
+    body.classList.remove("input-focused-home");
+  }
+})
 
 const validations = (values) => {
   const errors = {};
@@ -21,12 +32,11 @@ const InputBox = (props) => {
   return (
     <Form.Field>
       <label className="label">{label}</label>
-      <input className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value} />
+      <input onClick={inputClick} className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value} />
       {
         touched && ((error && <span className="error">{error}</span>))
       }
     </Form.Field>
-
   );
 }
 

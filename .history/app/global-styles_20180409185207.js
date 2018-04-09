@@ -38,7 +38,26 @@ injectGlobal`
   font-weight: 400;
   src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
 }
+<<<<<<< HEAD
+  
+ 
+=======
+ @font-face {
+   font-family: 'FFDINStdLight';
+   src: url('./Fonts/webfonts/363D4D_0_0.eot');
+   src: url('./Fonts/webfonts/363D4D_0_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_0_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_0_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_0_0.ttf') format('truetype');}
 
+
+@font-face {
+  font-family: 'FFDINStdRegular';src: url('./Fonts/webfonts/363D4D_1_0.eot');src: url('./Fonts/webfonts/363D4D_1_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_1_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_1_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_1_0.ttf') format('truetype');}
+
+
+@font-face {
+  font-family: 'FFDINStdMedium';
+  src: url('./Fonts/webfonts/363D4D_2_0.eot');
+  src: url('./Fonts/webfonts/363D4D_2_0.eot?#iefix') format('embedded-opentype'),url('./Fonts/webfonts/363D4D_2_0.woff2') format('woff2'),url('./Fonts/webfonts/363D4D_2_0.woff') format('woff'),url('./Fonts/webfonts/363D4D_2_0.ttf') format('truetype');}
+
+>>>>>>> ee9ff036cdf320abba0d08aa854e0e59ddfc1847
   html,
   body {
     height: 100%;
@@ -46,8 +65,14 @@ injectGlobal`
     overflow:hidden;
   }
   h1,h2,h3,h4,h5,h6{
+<<<<<<< HEAD
     font-family: 'Roboto', sans-serif;
     font-weight:400;
+    
+=======
+    font-family: 'FFDINStdRegular';
+
+>>>>>>> ee9ff036cdf320abba0d08aa854e0e59ddfc1847
   }
   h2{
     font-size:22pt;
@@ -141,8 +166,13 @@ body.input-focused-home  .Header {
   color: #000;
   opacity: 0.85;
   letter-spacing:0.6px;
+<<<<<<< HEAD
   margin:20px auto !important;
+  
+=======
+  margin:20px 0 !important;
 
+>>>>>>> ee9ff036cdf320abba0d08aa854e0e59ddfc1847
 }
 .main-text strong{
    font-family: "San Francisco Display SemiBold";
