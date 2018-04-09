@@ -360,9 +360,6 @@ body.input-focused-home  .Header {
     margin-bottom:30px !important;
   }
   .complete-page{
-    .Mockup{
-      margin-top:0 !important;
-    }
     .Heading{
       font-size: 38pt !important;
       line-height:38pt !important;

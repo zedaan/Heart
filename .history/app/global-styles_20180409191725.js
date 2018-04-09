@@ -282,9 +282,7 @@ body.input-focused-home  .Header {
 }
 
 .complete-page{
-  .Mockup{
-    margin-top: -15px;
-  }
+
   .Heading{
     position: relative;
     word-spacing: 0.1rem;
@@ -311,7 +309,6 @@ body.input-focused-home  .Header {
     color: #fff;
     opacity: 0.85;
     font-size:16px;
-    text-transform: capitalize;
   }
 }
 
@@ -360,20 +357,15 @@ body.input-focused-home  .Header {
     margin-bottom:30px !important;
   }
   .complete-page{
-    .Mockup{
-      margin-top:0 !important;
-    }
     .Heading{
-      font-size: 38pt !important;
-      line-height:38pt !important;
-    }
+    font-size: 38pt !important;
+    line-height:38pt !important;
     .main-text{
       font-size: 22px;
-      margin:0 auto 1important;
     }
     .btn-custom{
       margin:10px auto !important;
-      font-size:18px;
+      text-transform: captilize;
     }
   }
  
