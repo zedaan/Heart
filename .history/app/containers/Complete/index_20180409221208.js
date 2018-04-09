@@ -25,7 +25,7 @@ import Button from '../../components/Button';
 export class Complete extends React.Component { // eslint-disable-line react/prefer-stateless-function
   
   pageLoad = () => {
-    document.getElementById('table-middle-row').classList.add("alpha");
+    document.getElementById('table-middle-row').className = "alpha"
   }
 
   render() {

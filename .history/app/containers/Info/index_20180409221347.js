@@ -21,13 +21,12 @@ import * as a from './actions';
 export class Info extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   pageLoad = () => {
-   
-    document.getElementById('table-middle-row').classList.add("alpha");
+    alert('ji');
+    document.getElementById('table-middle-row').className = "alpha"
   }
-  
+
   onSubmit = (value) => {
-    this.props.history.push('/complete');
-    document.getElementById('table-middle-row').classList.remove("alpha");
+    this.props.history.push('/complete')
   }
 
 

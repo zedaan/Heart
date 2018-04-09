@@ -24,10 +24,8 @@ export class Login extends React.Component { // eslint-disable-line react/prefer
     if (value.email !== '' && value.password !== '') {
       this.props.history.push('/promo')
     } 
-    document.getElementById('table-middle-row').classList.remove("alpha");
   }
   pageLoad = () => {
-    document.getElementById('table-middle-row').classList.remove("alpha");
     document.getElementById('table-middle-row').classList.add("alpha");
   }
 

@@ -26,9 +26,8 @@ export class Signup extends React.Component { // eslint-disable-line react/prefe
     } 
     document.getElementById('table-middle-row').classList.remove("alpha");
   }
-  
+
   pageLoad = () => {
-    document.getElementById('table-middle-row').classList.remove("alpha");
     document.getElementById('table-middle-row').classList.add("alpha");
   }
 

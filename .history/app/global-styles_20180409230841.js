@@ -59,8 +59,8 @@ injectGlobal`
     font-weight:bold;
   }
   .alpha{
-    background:linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8) ), url(${image}) !important;
-    transition: 1s ease-in-out;
+    background:linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8) ), url(${image}) !important;
+    transition: .5s ease-in-out;
   }
   #table{
     position: relative;
@@ -68,11 +68,10 @@ injectGlobal`
     height:100vh;
     margin:auto ;
     min-width:100%;
-    
-    
+
+
   }
   #table-middle-row{
-    transition: 1s ease-in-out;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -368,9 +367,6 @@ body.input-focused-home  .Header {
     font-size: 33pt !important;
     line-height:33pt !important;
     margin-bottom:30px !important;
-  }
-  .ui.form select{
-    width:60%;
   }
   .complete-page{
     .Mockup{

@@ -28,7 +28,7 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
         this.props.history.push('/start')
       }
     
-    document.getElementById('table-middle-row').classList.remove('alpha');
+    document.getElementById('table-middle-row').removeClass = 'alpha'
   }
 
   render() {

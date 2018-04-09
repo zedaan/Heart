@@ -7,15 +7,6 @@ import Button from "components/Button";
 
 let body = document.querySelector("body");
 
-const inputClick = () => {
-    body.classList.add("input-focused-home");
-}
-
-body.addEventListener('click', function (e) {
-    if (!e.target.classList.contains('main-input')) {
-        body.classList.remove("input-focused-home");
-    }
-})
 
 const validations = (values) => {
     const errors = {};
@@ -38,7 +29,15 @@ const validations = (values) => {
     return errors;
 }
 
+const inputClick = () => {
+  body.classList.add("input-focused-home");
+}
 
+body.addEventListener('click',function (e) {
+  if (!e.target.classList.contains('main-input')){
+    body.classList.remove("input-focused-home");
+  }
+})
 
 const InputBox = (props) => {
     props.input.value = props.val;

@@ -24,11 +24,10 @@ import Heading from '../../components/Heading'
 import Button from '../../components/Button';
 
 export class Start extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  
   handleSubmit = (props) => {
     this.props.history.push('/info')
   }
-
+  
   render() {
     return (
       <div>

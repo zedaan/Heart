@@ -8,7 +8,6 @@ let body = document.querySelector("body");
 
 const inputClick = () => {
     body.classList.add("input-focused-home");
-    document.getElementById('table-middle-row').classList.add("alpha");
 }
 
 body.addEventListener('click', function (e) {
@@ -53,11 +52,11 @@ const validations = (values) => {
 
 const InputBox = (props) => {
     props.input.value = props.val;
-    const { type, input, placeholder, autoComplete, name, checked, className, onClick, label, meta: { touched, error } } = props;
+    const { type, input, placeholder, autoComplete, name, checked, className, label, meta: { touched, error } } = props;
     return (
         <Form.Field>
             <label className="label">{label}</label>
-            <input onClick={onClick} className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value}  />
+            <input className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value}  />
             {
                 touched && ((error && <span className="error">{error}</span>))
             }
@@ -90,16 +89,16 @@ let Demo = (props) => {
     return (
         <Form onSubmit={handleSubmit(onSubmit)} id="info-form">
 
-            <Field onClick={inputClick} component={InputBox} type="email" autoComplete='email' label="Your Email" name="email"  placeholder="Email"/>
+            <Field component={InputBox} type="email" autoComplete='email' label="Your Email" name="email"  placeholder="Email"/>
 
-            <Field onClick={inputClick} component={InputBox} type="text" autoComplete='firstName' label="First Name" name="firstName" placeholder="First Name"/>
+            <Field component={InputBox} type="text" autoComplete='firstName' label="First Name" name="firstName" placeholder="First Name"/>
 
-            <Field onClick={inputClick} component={InputBox} type="text" autoComplete='lastName' label="Last Name" name="lastName" placeholder="last Name"/>
+            <Field component={InputBox} type="text" autoComplete='lastName' label="Last Name" name="lastName" placeholder="last Name"/>
 
 
-            <Field onClick={inputClick} component={DropdownField} autoComplete='options' label="Employee/Spouse" name="options" />
+            <Field component={DropdownField} autoComplete='options' label="Employee/Spouse" name="options" />
 
-            <Field onClick={inputClick} component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID"/>
+            <Field component={InputBox} type="text" autoComplete='hlcid' label="HLCID" name="hlcid" placeholder="HLCID"/>
             <span className="warning">You can find it on your Healthy Living Credit Checklist</span>    
             
             <Button text="Continue" />

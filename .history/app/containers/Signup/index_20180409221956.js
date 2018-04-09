@@ -24,12 +24,11 @@ export class Signup extends React.Component { // eslint-disable-line react/prefe
     if(value.email !== '' && value.password !== ''){
       this.props.history.push('/login')
     } 
-    document.getElementById('table-middle-row').classList.remove("alpha");
   }
-  
+
   pageLoad = () => {
-    document.getElementById('table-middle-row').classList.remove("alpha");
-    document.getElementById('table-middle-row').classList.add("alpha");
+    alert('hi');
+    document.getElementById('table-middle-row').className = "alpha"
   }
 
   render() {

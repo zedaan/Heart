@@ -27,8 +27,6 @@ export class Promo extends React.Component { // eslint-disable-line react/prefer
     if (value.promo !== '' || value.promo !== null){
         this.props.history.push('/start')
       }
-    
-    document.getElementById('table-middle-row').classList.remove('alpha');
   }
 
   render() {

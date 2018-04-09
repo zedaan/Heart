@@ -27,7 +27,6 @@ export class Login extends React.Component { // eslint-disable-line react/prefer
     document.getElementById('table-middle-row').classList.remove("alpha");
   }
   pageLoad = () => {
-    document.getElementById('table-middle-row').classList.remove("alpha");
     document.getElementById('table-middle-row').classList.add("alpha");
   }
 
