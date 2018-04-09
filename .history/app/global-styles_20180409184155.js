@@ -56,7 +56,7 @@ injectGlobal`
     font-family: 'Roboto', sans-serif;
     font-weight:500;
   }
-  p,label, input, span, select, option {
+  p,label, input, span, select {
     font-family: "San Francisco Display Thin";
     font-weight:bold;
   }
@@ -166,8 +166,8 @@ injectGlobal`
     position: relative;
     display: inline;
     font-size: 16px;
+    font-weight:bold;
     color: #000;
-    letter-spacing:0.6px;
     opacity: 0.85;
     font-family: "San Francisco Display Thin", sans-serif;
   }
@@ -203,8 +203,6 @@ injectGlobal`
     opacity: 0.85;
     line-height: 17pt;
     padding:0.7em 0;
-    letter-spacing:0.6px;
-    
   }
   .main-input{
     font-size: 16px;
@@ -216,8 +214,6 @@ injectGlobal`
     border:none;
     padding-left:0;
     background-color: transparent;
-    letter-spacing:0.6px;
-    
   }
 
   .main-input::placeholder {
@@ -234,7 +230,7 @@ injectGlobal`
 }
 .ui.form select{
   font-family: "San Francisco Display Thin";
-  width:55%;
+  width:60%;
   border:none;
   position: relative;
   display: inline-block;
@@ -322,7 +318,8 @@ injectGlobal`
   text-align:left;
   padding-left:15px;
   font-size:15px;
-  line-height:15pt;
+  line-height:16pt;
+  font-weight:400;
 }
 .register{
   color:#c9c4c2;
@@ -338,11 +335,7 @@ injectGlobal`
   font-family: "San Francisco Display Thin" !important;
 }
 
-@media(max-width: 320px){
-  .ui.form select{
-    width: 40%;
-  }
-}
+
 @media(min-width: 768px){
   h2{
     font-size: 33pt !important;

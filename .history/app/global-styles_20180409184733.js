@@ -338,11 +338,7 @@ injectGlobal`
   font-family: "San Francisco Display Thin" !important;
 }
 
-@media(max-width: 320px){
-  .ui.form select{
-    width: 40%;
-  }
-}
+
 @media(min-width: 768px){
   h2{
     font-size: 33pt !important;

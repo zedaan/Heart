@@ -38,25 +38,37 @@ injectGlobal`
   font-weight: 400;
   src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
 }
+ @font-face {
+   font-family: 'FFDINStdLight';
+   src: url('https://helloheart.com/wp-content/themes/helloheart/webfonts/315CDD_2_0.woff2') format('woff2')
+  }
+ 
   
+@font-face {
+  font-family: 'FFDINStdRegular';
+  src: url('https://helloheart.com/wp-content/themes/helloheart/webfonts/315CDD_1_0.woff2') format('woff2')
+}
+ 
+  
+@font-face {
+  font-family: 'FFDINStdMedium';
+  src: url('https://helloheart.com/wp-content/themes/helloheart/webfonts/315CDD_2_0.woff2') format('woff2')
+}
  
   html,
   body {
     height: 100%;
     width: 100%;
-    overflow:hidden;
+    font-family: "San Francisco Display Thin", sans-serif;
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'Roboto', sans-serif;
-    font-weight:400;
+    font-family: 'FFDINStdRegular';
     
   }
   h2{
     font-size:22pt;
-    font-family: 'Roboto', sans-serif;
-    font-weight:500;
   }
-  p,label, input, span, select, option {
+  p,label, input, span {
     font-family: "San Francisco Display Thin";
     font-weight:bold;
   }
@@ -83,7 +95,15 @@ injectGlobal`
   #app{
     width:100%;
   }
-
+  .light{
+    font-weight:100;
+  }
+  .normal{
+    font-weight:400;
+  }
+  .medium{
+    font-weight:600;
+  }
 
 
 .height{
@@ -122,11 +142,13 @@ injectGlobal`
 // Typography Goes here
 .Main-Heading{
   position: relative;
-  font-weight: 300;
-  font-size: 28pt;
+  ffont-family: 'FFDINStdRegular', sans-serif;
+  font-style: bold;
+  font-weight: 100;
+  font-size: 36pt;
   word-spacing: 0.1rem;
   letter-spacing: 0.1rem;
-  line-height:28pt;
+  line-height:36pt;
   color: #000;
   opacity: 0.85;
 
@@ -137,19 +159,21 @@ injectGlobal`
   color: #000;
   opacity: 0.85;
   letter-spacing:0.6px;
-  margin:20px auto !important;
+  margin:20px 0 !important;
   
 }
 .main-text strong{
-   font-family: "San Francisco Display SemiBold";
+  font-family: "San Francisco Display SemiBold";
 }
 .sub-text{
-  font-size: 18px;
+  ffont-family: 'FFDINStdRegular', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: #000;
   opacity: 0.85;
+  // margin-top: 2.7rem;
   position:absolute;
   bottom:6rem;
-  letter-spacing:0.6px;
   left:0;
   right:0;
 }
@@ -167,14 +191,12 @@ injectGlobal`
     display: inline;
     font-size: 16px;
     color: #000;
-    letter-spacing:0.6px;
     opacity: 0.85;
     font-family: "San Francisco Display Thin", sans-serif;
   }
   .main-input{
     font-size: 16px;
     position: relative;
-    font-family: "San Francisco Display Thin", sans-serif;
     display: inline-block;
     width: 50%;
     padding: 1rem;
@@ -196,15 +218,12 @@ injectGlobal`
   height:50px;
   .label{
     position: relative;
-    font-family: "San Francisco Display Thin", sans-serif;
     display: inline-block !important;
     font-size: 16px;
     color: #000;
     opacity: 0.85;
     line-height: 17pt;
     padding:0.7em 0;
-    letter-spacing:0.6px;
-    
   }
   .main-input{
     font-size: 16px;
@@ -216,8 +235,6 @@ injectGlobal`
     border:none;
     padding-left:0;
     background-color: transparent;
-    letter-spacing:0.6px;
-    
   }
 
   .main-input::placeholder {
@@ -233,13 +250,12 @@ injectGlobal`
   outline:none;
 }
 .ui.form select{
-  font-family: "San Francisco Display Thin";
-  width:55%;
+  font-family: 'DINOT';
+  width:60%;
   border:none;
   position: relative;
   display: inline-block;
   float:right;
-  font-size:16px;
   padding: 1rem;
   padding-left:0;
   float: right;
@@ -268,9 +284,8 @@ injectGlobal`
   word-spacing: 0.1rem;
   color: #fff;
   opacity: 0.85;
-  margin:20px 0;
+  margin-top:10px;
   height:50px;
-  letter-spacing:0.6px;
 
 }
 .btn-custom:focus{
@@ -321,8 +336,8 @@ injectGlobal`
   color:#c9c4c2;
   text-align:left;
   padding-left:15px;
-  font-size:15px;
-  line-height:15pt;
+  font-size:13pt;
+  line-height:16pt
 }
 .register{
   color:#c9c4c2;
@@ -338,27 +353,13 @@ injectGlobal`
   font-family: "San Francisco Display Thin" !important;
 }
 
-@media(max-width: 320px){
-  .ui.form select{
-    width: 40%;
-  }
+body{
+  
+  overflow:hidden;
 }
 @media(min-width: 768px){
   h2{
-    font-size: 33pt !important;
-    line-height:33pt !important;
-    margin-bottom:30px !important;
-  }
-  .Main-Heading{
-    font-size: 36pt !important;
-    line-height:36pt !important;
-
-  }
-  .main-text{
-    font-size:20px;
-    width:50%;
-    margin:20px auto;
-    margin-bottom:30px !important;
+    font-size: 32pt;
   }
   .table{
      min-width:50%;
@@ -378,7 +379,9 @@ injectGlobal`
     .field{
       padding-left:20px;
     }
-   
+    select{
+      width:70%;
+    }
     .btn-custom{
       width:100%;
     }
