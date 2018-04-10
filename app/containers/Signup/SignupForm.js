@@ -8,7 +8,7 @@ let body = document.querySelector("body");
 
 const inputClick = () => {
     body.classList.add("input-focused-home");
-    document.getElementById('table-middle-row').className = "alpha";
+    document.getElementById('table-middle-row').classList.add("alpha");
 }
 
 body.addEventListener('click', function (e) {

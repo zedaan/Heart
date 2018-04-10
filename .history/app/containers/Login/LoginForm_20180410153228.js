@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form/immutable';
-import { Grid, Form, Input,Select,Label } from 'semantic-ui-react';
+import { Grid, Form, Input, Select, Label } from 'semantic-ui-react';
 import Button from "components/Button";
 
 let body = document.querySelector("body");
 
 const inputClick = () => {
     body.classList.add("input-focused-home");
-    document.getElementById('table-middle-row').className = "alpha";
 }
 
 body.addEventListener('click', function (e) {
@@ -46,7 +46,7 @@ const InputBox = (props) => {
     return (
         <Form.Field>
             <label className="label">{label}</label>
-            <input onClick={onClick} className="main-input" {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value} />
+            <input className="main-input" onClick={onClick} {...input} type={type} autoComplete={autoComplete} placeholder={placeholder} checked={checked} name={name} value={input.value} />
             {
                 touched && ((error && <span className="error">{error}</span>))
             }
@@ -58,36 +58,36 @@ const InputBox = (props) => {
 
 
 
-let Signup = (props) => {
+let Login = (props) => {
 
 
     const { onSubmit, handleSubmit } = props;
 
     return (
-        <Form onSubmit={handleSubmit(onSubmit)} id="signup-form">
+        <Form onSubmit={handleSubmit(onSubmit)} id="login-form">
 
             <Field onClick={inputClick} component={InputBox} type="email" autoComplete='email' label="Email" name="email" placeholder="Email" />
 
             <Field onClick={inputClick} component={InputBox} type="password" autoComplete='password' label="Password" name="password" placeholder="Password" />
-            <Button text="SIGN UP NOW!" />
-            <span className="register">By registering you agree to receive emails, calls and text messages from Hello Heart.Term of Use & Privacy Policy</span>
+            <Button text="LOGIN IN" />
+            <span className="register clr-primary"> <Link to="/">Need help?</Link></span>
 
         </Form>
 
     );
 }
 
-Signup = reduxForm({
-    form: 'SignupForm',
+Login = reduxForm({
+    form: 'LoginForm',
     validate: validations,
 
-})(Signup);
+})(Login);
 
-Signup = connect(
+Login = connect(
     state => ({
 
 
     })
-)(Signup)
+)(Login)
 
-export default Signup;
+export default Login;

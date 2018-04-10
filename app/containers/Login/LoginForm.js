@@ -64,7 +64,7 @@ let Login = (props) => {
     const { onSubmit, handleSubmit } = props;
 
     return (
-        <Form onSubmit={handleSubmit(onSubmit)} >
+        <Form onSubmit={handleSubmit(onSubmit)} id="login-form">
 
             <Field onClick={inputClick} component={InputBox} type="email" autoComplete='email' label="Email" name="email" placeholder="Email" />
 

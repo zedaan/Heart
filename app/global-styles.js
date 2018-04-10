@@ -194,7 +194,7 @@ body.input-focused-home  .Header {
   }
 }
 
-#signup-form .field:nth-child(2){
+#signup-form .field:nth-child(2), #login-form .field:nth-child(2){
   border-bottom: 1px solid rgb(216,216,216);
 }
 #login-form h2{
